@@ -1,0 +1,10 @@
+package sistemaCaixaAutomatico;
+
+public class ContaPoupanca extends ContaCor {
+
+	public ContaPoupanca(String titular, float saldoAtual, int numConta, int senha) {
+		super(titular, saldoAtual, numConta, senha);
+		// TODO Auto-generated constructor stub
+	}
+
+}

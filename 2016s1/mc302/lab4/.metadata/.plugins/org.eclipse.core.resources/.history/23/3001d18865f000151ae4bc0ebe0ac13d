@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class ExemploEditor {
+
+	public ExemploEditor() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

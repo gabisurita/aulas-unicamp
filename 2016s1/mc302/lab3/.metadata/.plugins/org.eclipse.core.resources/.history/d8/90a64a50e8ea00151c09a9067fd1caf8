@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.alunos;
+
+public class ExemploGraduando {
+
+	public static void main(String[] args) {
+		Graduando eu = new Graduando("Surita", "427.873.578-22", "36745507-9", "Fernanda", "Rodrigo", "139095", "EC");
+		
+		eu.adicionaNota(10, 6);
+		
+		System.out.println("Meu nome: " + eu.getNome());
+		System.out.println("Meu CPF: " + eu.getCpf());
+		
+	}
+
+}

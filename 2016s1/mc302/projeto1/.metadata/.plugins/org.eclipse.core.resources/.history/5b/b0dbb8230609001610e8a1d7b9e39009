@@ -1,0 +1,25 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Scanner;
+
+public class ControladorDeEntrada {
+
+	private ControleReservas cont;
+	Scanner in;
+	
+	public ControladorDeEntrada() {	
+		
+		in = new Scanner(System.in);
+	}
+
+	public void login(){
+		
+		System.out.println("Nome");
+		String login = in.next();
+		System.out.println("Senha");
+		String senha = in.next();
+		
+		cont.login(login, senha);
+		
+	}
+}

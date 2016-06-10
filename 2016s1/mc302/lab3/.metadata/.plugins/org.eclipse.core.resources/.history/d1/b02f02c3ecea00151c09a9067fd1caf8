@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class SistemaPlanetario {
+
+	protected int id;
+	
+	public SistemaPlanetario(int id) {
+		this.id = id;
+	}
+
+}

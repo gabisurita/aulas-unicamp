@@ -1,0 +1,23 @@
+Nome: R. de Castro Surita
+RA: 139095
+
+1. A implementação do ítem (a) demonstra o funcionamento de métodos e atríbutos
+de objeto, onde cada instância possuí uma cópia indepentente destes estados.
+Já o ítem (b) implementa métodos e atríbutos de classe, que são definidos para
+a classe e compartilhados por todos os objetos. Os métodos e atributos de 
+objeto devem ser acessados por meio do objeto, enquanto os métodos e atributos 
+de classe devem ser acessados através da classe (definida na API como um 
+objeto do tipo Class).
+
+
+2. 
+
+3.
+
+4. Ao se implementar o padrão de projeto Fábrica, os objetos das classes são 
+criados a partir de uma chamada de método de classe da Fábrica 
+(Fabrica.novoMinhaClasse()), e não atraves do gerador da classe em si 
+(new MinhaClasse()). Esta abstração traz como vantagem a possibilidade de 
+implementar todos os atributos e métodos de classe correspondentes ao metanível
+na Fábrica, fazendo com que as classes das quais serão criados objetos 
+contenham apenas métodos e atributos de objeto referentes ao estado do objeto.

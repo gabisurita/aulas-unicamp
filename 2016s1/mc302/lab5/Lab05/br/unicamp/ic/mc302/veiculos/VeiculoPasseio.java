@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class VeiculoPasseio extends Veiculo {
+
+	private int nBancos;
+	
+	public VeiculoPasseio() {
+	}
+
+	public void defineBancos(int nBancos){
+		this.nBancos = nBancos;
+	}
+	
+	public void display(){
+		super.display();
+		System.out.println("Numero de Bancos: "+nBancos);
+	}
+}

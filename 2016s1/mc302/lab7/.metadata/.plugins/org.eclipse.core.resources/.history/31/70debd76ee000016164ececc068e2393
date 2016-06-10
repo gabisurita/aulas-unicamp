@@ -1,0 +1,16 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.ArrayList;
+
+public class ExemploOnibus {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Onibus> = new ArrayList<Onibus>();
+		
+		OnibusConvencional o1 = new OnibusConvencional(1);
+		
+		OnibusLeito o2 = new OnibusLeito(2);
+	}
+
+}

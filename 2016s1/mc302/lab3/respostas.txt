@@ -1,0 +1,25 @@
+
+3. A classe ExemploConta tenta acessar atributos privados das classes 
+Conta e ContaPoupança em intâncias (objetos) derivadas das mesmas, bem como 
+tenta acessar um método de uma classe derivada em um objeto da classe mãe.
+
+4. A modificaçã permite o acesso e modifiacação do atributo saldo por subclasses
+da classe Conta, porém seus objetos não tem acesso ao atributo neste caso, como
+teriam se o atributo fosse público.
+
+6.1 O código funciona.
+
+6.2 A solução em questão mantém o encapsulamento dos atributos da classe mãe 
+(Conta), sendo essa uma boa prática em POO.
+
+7. A notação da operação minimum() é mais clara, pois abstrai a ideia de índice
+e itera cada um dos elementos da lista através de um apontador para o objeto.
+A primeira versão faz mais sentido quando cada objeto é trabalhado sem se
+relacionar dentro loop com outros da mesma lista, a segunda é mais prática
+quando essas relações acontecem dentro do loop.
+
+E.2 É possível chamar o método toString() na instância de sistema planetário
+e o resultado desta chamada é uma string contendo o pacote da classe, o nome da
+classe e um identificador da instância. No caso, a saída é:
+
+>> br.unicamp.ic.mc302.espaco.SistemaPlanetario@659e0bfd

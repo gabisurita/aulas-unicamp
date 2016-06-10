@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# Extrai os argumentos de repeticoes e atraso
+for ARG in $*
+do
+  case $ARG in
+    --repeticoes=*)
+      ITERS=`echo $ARG | cut -f 2 -d '='`
+      ;;
+      
+    --atraso=*)
+      DELAY=`echo $ARG | cut -f 2 -d '='`
+      ;;
+  esac
+done
+
+# Executa os demais comandos
+for ARG in $*
+do  
+  # Ignora os parametros iniciados por --
+  if [[ $ARG­ != --* ]]
+  then
+    # Itera ITER vezes    
+    for i in $(seq $ITERS)
+    do
+      $ARG
+      # Atraso de DELAY segundos      
+      sleep $DELAY
+    done    
+  fi
+done
+

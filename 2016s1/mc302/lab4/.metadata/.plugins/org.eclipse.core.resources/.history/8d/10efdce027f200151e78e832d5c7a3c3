@@ -1,0 +1,21 @@
+package br.unicamp.ic.mc302.onibus;
+
+public class Onibus {
+
+	private int nFileiras;
+	private int nLugares;
+	
+	private Fileira fileiras[];
+	
+	public Onibus(int nFileiras, int nLugares){
+		
+		this.nFileiras = nFileiras;
+		this.nLugares = nLugares;
+		
+		fileiras = new Fileira[nFileiras];
+		
+		for(int i=0; i<nFileiras; i++){
+			fileiras[i] = new Fileira(nLugares);
+		}
+	}
+}

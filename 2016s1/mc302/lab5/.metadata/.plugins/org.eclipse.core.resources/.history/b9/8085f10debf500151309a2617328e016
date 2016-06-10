@@ -1,0 +1,27 @@
+package br.unicamp.ic.mc302.universidade;
+
+public class ExemploPED {
+
+	public static void main(String[] args) {
+		
+		PED meuPed = new PED("Carlos", "981834");
+		
+		/* Metodos da classe pessoa */
+		meuPed.insereDocumentos("130449", "34489448922");
+
+		/* Metodos da classe EstudanteUniversitario */
+		meuPed.defineCurso("Doutorado em Computacao");
+		meuPed.adicionaCreditos(4);
+		meuPed.adicionaCreditos(2);
+		
+		/* Metodos da classe PosGraduando */
+		meuPed.adicionaNota('A');
+		meuPed.adicionaNota('B');
+		
+		/* Metodos da classe PED (implementados em Docente) */
+		meuPed.atribuiDisciplina("MC302");
+		
+		meuPed.imprimeInfo();
+	}
+
+}

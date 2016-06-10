@@ -1,0 +1,21 @@
+command=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-36.b13.fc22.x86_64/bin/javadoc
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="br.unicamp.ic.mc302.dadosPessoais.PessoaFisica"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Hospede"/><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Funcionario"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Hospede"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Hospede"/></lhs><lhs name\="br.unicamp.ic.mc302.dadosPessoais.Endereco"><rhs name\="br.unicamp.ic.mc302.dadosPessoais.Endereco"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Funcionario"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Funcionario"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.Hashtable"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Hashtable"/></lhs><lhs name\="java.util.Dictionary"><rhs name\="java.util.Hashtable"/></lhs><lhs name\="java.util.Hashtable"><rhs name\="java.util.Hashtable"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControladorDeSaida"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControladorDeSaida"/></lhs><lhs name\="br.unicamp.ic.mc302.dataHora.Data"><rhs name\="br.unicamp.ic.mc302.dataHora.Data"/></lhs><lhs name\="br.unicamp.ic.mc302.dataHora.Hora"><rhs name\="br.unicamp.ic.mc302.dataHora.Hora"/></lhs><lhs name\="br.unicamp.ic.mc302.dataHora.DataHora"><rhs name\="br.unicamp.ic.mc302.dataHora.DataHora"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Reserva"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Reserva"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleQuartos"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleQuartos"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleHospedes"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleHospedes"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleFuncionarios"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleFuncionarios"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleLogin"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.ControleLogin"/></lhs><lhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Ocupacao"><rhs name\="br.unicamp.ic.mc302.reservaDeQuartos.Ocupacao"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

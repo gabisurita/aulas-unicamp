@@ -1,0 +1,12 @@
+#! /bin/sh
+
+test -n "$1" && param1=$1
+test -n "$2" && param2=$2
+test -n "$3" && param3=$3
+test -n "$4" && param4=$4
+
+echo "1:${param1-abacaxi}:"; echo $param1
+echo "2:${param2=laranja}:"; echo $param2
+echo "3:${param3+melancia}:"; echo $param3
+echo "4:${param4?QuartaVarNaoInicializada}:"; echo $param4
+

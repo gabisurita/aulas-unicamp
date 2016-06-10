@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.minhaMatriz;
+
+
+class MinhaMatriz{
+
+	private int lin;
+	private int col;
+	private int val[][];
+
+	public MinhaMatriz(int nlin, int ncol){
+		
+		lin = nlin;
+		col = ncol;
+		
+		val = new int[nlin][ncol];
+	}
+
+}

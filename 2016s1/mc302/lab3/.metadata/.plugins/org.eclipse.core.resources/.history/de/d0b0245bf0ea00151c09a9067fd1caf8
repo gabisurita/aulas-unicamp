@@ -1,0 +1,53 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class SistemaPlanetario {
+
+	private int id;
+	
+	private Estrela estrelaMae;
+	private Planeta planetas[];
+	private CorpoCeleste cometas[];
+	private int nPlanetas;
+	private int nCometas;
+	
+	public SistemaPlanetario(int id, int nPlanetas, int nCometas) {
+		this.id = id;
+		this.nPlanetas = nPlanetas;
+		this.nCometas = nCometas;
+		
+		planetas = new Planeta[nPlanetas];
+		cometas = new CorpoCeleste[nCometas];
+		
+	}
+	
+	public void defineEstrela(String nome, float massa, float diametro){
+		estrelaMae = new Estrela(nome, massa, diametro);
+	}
+	
+	public void definePlanetaTerrestre(String nome, float massa, float diametro, int posicao, int nLuas){
+		planetas[posicao] = new PlanetaTerrestre(nome, massa, diametro);
+		planetas[posicao].luas = new CorpoCeleste[nLuas];
+	}
+	
+	public void definePlanetaGasoso(String nome, float massa, float diametro, int posicao, int nLuas){
+		planetas[posicao] = new PlanetaGasoso(nome, massa, diametro);
+		planetas[posicao].luas = new CorpoCeleste[nLuas];
+	}
+	
+	public void defineLua(String nome, float massa, float diametro, int planeta, int posicao){
+		planetas[planeta].luas[posicao] = new CorpoCeleste(nome, massa, diametro);
+	}
+	
+	public void defineCometa(String nome, float massa, float diametro, int posicao){
+		cometas[posicao] = new CorpoCeleste(nome, massa, diametro);
+	}
+
+	public void imprimePlanetas(){
+		for(Planeta p: planetas){
+			System.out.println(p.nome);
+		}
+	}
+	
+	
+}
+

@@ -1,0 +1,21 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class SistemaPlanetario {
+
+	private int id;
+	
+	private Estrela estrelaMae;
+	private Planeta planetas[];
+	private CorpoCeleste cometas[];
+	
+	public SistemaPlanetario(int id) {
+		this.id = id;
+	}
+	
+	public void defineEstrela(String nome, float massa, float diametro){
+		estrelaMae = new Estrela(nome, massa, diametro);
+	}
+	
+	
+
+}

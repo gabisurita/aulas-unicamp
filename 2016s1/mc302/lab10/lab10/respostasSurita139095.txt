@@ -1,0 +1,31 @@
+Atividade: Lab10
+Nome: R. de Castro Surita
+RA: 139095
+
+
+1. A mudança produz um erro pois a classe concreta C1 Precisa de uma 
+implementação para ligar ao método chamado.
+
+2. --
+
+3. --
+
+4. A compilação falha pois a classe C3 precisa implementar os métodos de I3 (m3)
+ e I1, já que agora a interface I3 extende I1  A compilação falha novamente 
+quando extende-se I2, pois agora é necessário implementar também os métodos de
+I2 (m2).
+
+5. O erro de compilação ocorre pois m5 é um método definido na interface I5
+implementada por C4, inacessiveis a objetos do tipo I4. Ao modificar o tipo do
+objeto para C4, este agora possuí acesso a todos os métodos públicos de C4,
+incluindo os definidos em interfaces.
+
+6. A modificação permitiu trocar as implementação do repositório de contas
+entre a versão implementada com Array e com Vector, porém o funcionamento é 
+transparente para a aplicação principal.
+
+7. --
+
+8. --
+
+

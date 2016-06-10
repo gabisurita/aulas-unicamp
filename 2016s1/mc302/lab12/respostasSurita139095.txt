@@ -1,0 +1,17 @@
+Nome: R de Castro Surita
+RA: 139095
+
+1. --
+
+2.  Ao utilizar uma classe "Facade" Motor, o funcionamento intrínseco complexo
+dos seus componentes pode ser abstraído, sendo que para ligá-lo, não é 
+necessário conhecer o funcionamento de cada componente. O funcionamento do 
+modelo Facade (ou fachada, em tradução livre) consiste em criar objetos de cada
+componente e métodos públicos simplificados que executem tarefas que façam 
+sentido no nível de abstração que usará a classe.
+
+3. --
+
+4. --
+
+5. -- 

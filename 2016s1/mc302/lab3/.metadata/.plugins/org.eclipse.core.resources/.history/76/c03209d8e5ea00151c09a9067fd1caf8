@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.alunos;
+
+public class EstudanteUniversitario extends Pessoa {
+
+	public EstudanteUniversitario(String nome, String cpf, String rg, String nomeDaMae, String nomeDoPai, 
+			String RA, String Curso, int creditosConcluidos){
+		super(nome, cpf, rg, nomeDaMae, nomeDoPai);
+	}
+}

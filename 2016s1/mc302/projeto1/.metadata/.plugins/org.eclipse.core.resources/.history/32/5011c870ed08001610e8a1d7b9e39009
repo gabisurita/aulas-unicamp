@@ -1,0 +1,46 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import br.unicamp.ic.mc302.documentos.Documento;
+
+public abstract class Pessoa {
+
+	private String nome;
+	private Documento documento;
+	private String endereço;
+	private String telefone;
+	
+	
+	public Pessoa() {
+	}
+	
+	public Pessoa(String nome, String documento){
+		this.nome = nome;
+		this.documento = documento;
+	}
+
+	public String nome(){
+		return this.nome;
+	}
+	
+	public String documento(){
+		return this.documento;
+	}
+	
+	public String endereco(){
+		return this.endereço;
+	}
+	
+	public tipoDocumento tipoDocumento(){
+		return this.tipoDocumento;
+	}
+
+	public void setNome(String nome){
+		this.nome = nome;
+	}
+	
+	public void setDocumento(String documento){
+		this.documento = documento;
+	}
+	
+	
+}

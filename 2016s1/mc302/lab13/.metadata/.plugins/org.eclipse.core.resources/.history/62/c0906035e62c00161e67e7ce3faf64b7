@@ -1,0 +1,34 @@
+package br.unicamp.ic.mc302.veiculosMeta;
+
+public final class fabricaVeiculos {
+
+	private static int contadorVeiculos;
+	private static int contadorCarros;
+	private static int contadorCaminhoes;
+	
+	
+	public static Carro novoCarro(int placa, int numPassageiros) {
+		
+		Carro c = new Carro(placa, numPassageiros);
+		
+		contadorCarros++;
+		contadorVeiculos++;
+		
+		return c;
+	}
+
+	public static Caminhao novoCaminhao(int placa, int tipoDaCarga) {
+
+		Caminhao c = new Caminhao(placa, tipoDaCarga);
+		contadorCaminhoes++;
+		contadorVeiculos++;
+	}
+
+	
+	
+	public static int getContadorVeiculos() {
+		return contadorVeiculos;
+	}
+
+	
+}

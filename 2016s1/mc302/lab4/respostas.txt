@@ -1,0 +1,15 @@
+
+1. (a) O resultado não respeita o comportamento de fila pois a classe Fila foi 
+criada herdando a classe Lista, porém a classe Lista possui métodos em sua 
+interface pública que não são válidos para a fila e portanto, quando chamados
+em uma aplicação, violam o comportamento esperado.
+
+   (b) Ao reimplementar a fila utilizando uma agregação e rexecutando o exemplo
+de aplicação ExemploFila ocorrem erros pois o método adicionaInicio(int) não 
+faz mais parte da interface pública da classe Fila.
+
+4. A solução possível é criar uma classe mais abstrata para veiculos motorizados
+e por herança derivar as classes Carro e Caminhao. (Implementado nos aquivos
+{Caminhao, Carro, Motor, TanqueCombustivel}.java)
+
+

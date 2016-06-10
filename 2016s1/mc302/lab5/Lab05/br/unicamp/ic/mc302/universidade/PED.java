@@ -1,0 +1,20 @@
+package br.unicamp.ic.mc302.universidade;
+
+public class PED extends PosGraduando {
+
+	private Docente atividadeDocente;
+	
+	public PED(String nome, String ra) {
+		super(nome, ra);
+		atividadeDocente = new Docente(nome);
+	}
+	
+	public void atribuiDisciplina(String codigo){
+		atividadeDocente.atribuiDisciplina(codigo);
+	}
+
+	public void imprimeInfo(){
+		super.imprimeInfo();
+		atividadeDocente.imprimeDisciplinas();
+	}
+}

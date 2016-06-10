@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Figura {
+	
+	public Figura(){
+	}
+	
+	public void desenhar(){
+	}
+
+}

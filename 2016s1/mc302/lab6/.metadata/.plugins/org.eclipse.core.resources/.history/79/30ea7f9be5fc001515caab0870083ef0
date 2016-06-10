@@ -1,0 +1,54 @@
+package br.unicamp.ic.mc302.oficina;
+import java.util.ArrayList;
+
+public class Oficina {
+
+	ArrayList<Funcionario> pessoas;
+	ArrayList<Servico> servicos;
+	
+	public Oficina(){
+		pessoas = new ArrayList<Funcionario>();
+		servicos = new ArrayList<Servico>();
+	}
+	
+	public void adicionaFuncionario(String nome, double salario){
+		Funcionario f = new Funcionario(nome, salario);
+		pessoas.add(f);
+	}
+
+	public void adicionaGerente(String nome, double salario){
+		Funcionario f = new Gerente(nome, salario);
+		pessoas.add(f);
+	}
+	
+	public void adicionaServico(Servico servico, int idDoFuncionario){
+		servicos.add(servico);
+		pessoas.get(idDoFuncionario).
+	}
+	
+	public void dadosFuncionario(int id){
+		
+		if(id>pessoas.size())
+			System.out.println("Usuario nao existe");
+		
+		Funcionario f = pessoas.get(id);
+
+		System.out.println("Nome: " + f.nome());
+		System.out.println("Nome: " + f.ehGerente());
+		System.out.println("Salario: " + f.salario());
+		System.out.println("Comissao: " + f.comissao());
+		System.out.println("Trabalhos realizados: ");
+		System.out.println("Tipo 1: " + f.nServicos("Tipo1"));
+		System.out.println("Tipo 2: " + f.nServicos("Tipo2"));
+		System.out.println("Tipo 3: " + f.nServicos("Tipo3"));
+	}
+	
+	public int idFuncionario(String nome){
+		for(int i=0; i<pessoas.size(); i++){
+			if(pessoas.get(i).nome() == nome){
+				return i;
+			}
+		}
+		System.out.println("Usuario nao existe");
+	}
+}

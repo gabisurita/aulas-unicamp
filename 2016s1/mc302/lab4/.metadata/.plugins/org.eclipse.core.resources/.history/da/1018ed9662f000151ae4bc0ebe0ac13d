@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Poligono extends Figura {
+
+	private int lados;
+	private double vertices;
+	
+	private Linha linhas;
+	
+	public Poligono(int l, double v[]) {
+		
+		super();
+		
+		linhas = new Linha[l];
+		
+	}
+
+}

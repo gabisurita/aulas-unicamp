@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.universidade;
+
+public class PED extends PosGraduando {
+
+	public PED(String nome, int ra) {
+		super(nome, ra);
+		// TODO Auto-generated constructor stub
+	}
+
+}

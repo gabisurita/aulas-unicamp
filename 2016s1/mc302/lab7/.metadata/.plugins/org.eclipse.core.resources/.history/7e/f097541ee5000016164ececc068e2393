@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class FileiraDePoltronas {
+
+	private ArrayList<Poltrona> poltronas;
+	
+	
+	public FileiraDePoltronas(int nPoltronas) {
+		
+		this.poltronas = new ArrayList<Poltrona>();
+	}
+
+}

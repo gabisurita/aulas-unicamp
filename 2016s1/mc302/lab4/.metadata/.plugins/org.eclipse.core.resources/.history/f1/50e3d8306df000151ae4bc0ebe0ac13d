@@ -1,0 +1,75 @@
+package br.unicamp.ic.mc302.desenhos;
+
+import java.util.ArrayList;
+
+public class Tela {
+
+	private ArrayList<Figura> figuras;
+	public int nFiguras;
+	public Grupo corrente;
+	
+	public Tela(){
+		figuras = new ArrayList<Figura>();
+		nFiguras = 0;
+	}
+
+	public void novoPoligono(int l, double v[]){
+		
+		Figura fig = new Poligono(this, l, v);
+		figuras.add(fig);
+		nFiguras++;
+	}
+	
+	public void novaLinha(double x, double y){
+		
+		Figura fig = new Linha(this, x, y);
+		figuras.add(fig);
+		nFiguras++;
+	}
+	
+	public void novoCirculo(double r, double c){
+		
+		Figura fig = new Circulo(this, r, c);
+		figuras.add(fig);
+		nFiguras++;
+	}
+	
+	public void novoGrupo(int n){
+		
+		Grupo g = new Grupo(this);
+		figuras.add(g);
+		nFiguras++;
+		
+		corrente = g;
+	}
+	
+	public void adicionaPoligono(int l, double v[]){
+		
+		Figura fig = new Poligono(this, l, v);
+		corrente.adicionaFigura(fig);
+		
+	}
+	
+	public void adicionaLinha(double x, double y){
+		
+		Figura fig = new Linha(this, x, y);
+		corrente.adicionaFigura(fig);
+	}
+	
+	public void adicionaCirculo(double r, double c){
+		
+		Figura fig = new Circulo(this, r, c);
+		corrente.adicionaFigura(fig);
+	}
+	
+	public void fechaGrupo
+	
+	
+	public void desenhar(){
+		System.out.println("Desenha a tela");
+		
+		for(Figura f : figuras){
+			f.desenhar();
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Hashtable;
+
+public class ControleReservas {
+	
+	private Hashtable<String, Funcionario> funcionarios;
+	
+	public ControleReservas() {
+	}
+
+	
+}

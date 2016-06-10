@@ -1,0 +1,17 @@
+package br.unicamp.ic.mc302.oficina;
+import java.util.ArrayList;
+
+public class Funcionario {
+
+	private String nome;
+	private ArrayList<Servico> servicos;
+	
+	public Funcionario(String nome) {
+		this.nome = nome;
+		
+		servicos = new ArrayList<Servico>();
+	}
+	
+	
+
+}

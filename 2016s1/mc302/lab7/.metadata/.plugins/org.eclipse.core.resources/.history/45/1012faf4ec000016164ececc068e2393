@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.onibus;
+
+public class FileiraLeito extends Fileira {
+
+	public FileiraLeito() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.contaCor;
+
+public class ExemploDoisConstrutores {
+
+	public static void main(String[] args) {
+
+		ContaCor cc1 = new ContaCor("Chico", 0, 1, 1234);		
+		ContaCor cc2 = new ContaCor("Belchior", 2, 1111);
+
+		System.out.println(cc1.titular());
+		System.out.println(cc1.getSaldo(1234));
+		
+		System.out.println(cc2.titular());
+		System.out.println(cc2.getSaldo(1111));
+		
+	}
+
+}

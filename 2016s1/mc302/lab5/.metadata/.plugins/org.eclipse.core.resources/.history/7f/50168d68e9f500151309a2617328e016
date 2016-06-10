@@ -1,0 +1,14 @@
+package br.unicamp.ic.mc302.universidade;
+
+public class PED extends PosGraduando {
+
+	private Docente atividadeDocente;
+	
+	public PED(String nome, int ra) {
+		super(nome, ra);
+		atividadeDocente = new Docente(nome);
+	}
+	
+
+
+}

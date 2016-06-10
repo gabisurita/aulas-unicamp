@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.universidade;
+
+import java.util.ArrayList;
+
+public class PosGraduando extends EstudanteUniveristario {
+	
+	
+	private ArrayList<char[]> notasPos;
+	
+	public PosGraduando(String nome, int ra) {
+		super(nome, ra);
+	}
+
+	
+}

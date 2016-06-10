@@ -1,0 +1,75 @@
+package br.unicamp.ic.mc302.minhaMatriz;
+
+
+class MinhaMatriz{
+
+	private int lin;
+	private int col;
+	private int val[][];
+
+	// Criador de matriz nula
+	public MinhaMatriz(int nlin, int ncol){
+		
+		lin = nlin;
+		col = ncol;
+		
+		val = new int[nlin][ncol];
+	}
+	
+	// Criador a partir de um "array de arrays"
+	public MinhaMatriz(int values[][]){
+		
+		lin = values.length;
+		col = values[0].length;
+		
+		val = new int[lin][col];
+		
+		for(int i=0; i<lin; i++){
+			for(int j=0; j<col; j++){
+				val[i][j] = values[i][j];
+			}
+		}
+	}
+	
+	// retorna linhas
+	public int lins(){
+		return lin;
+	}
+	
+	// retorna colunas
+	public int cols(){
+		return col;
+	}
+	
+	// retorna valor da posicao i,j
+	public int value(int i, int j){
+		return val[i][j];
+	}
+	
+	// multiplicacao por uma outra matriz
+	public MinhaMatriz prod(MinhaMatriz op){
+		
+		int[][] res = new int[op.lins()][cols()];
+
+		for(int i=0; i<op.cols(); i++){
+			for(int j=0; j<lins(); j++){
+				for(int k=0; k<cols(); k++){
+					System.out.println(value(i,k) + " " + op.value(k,j));
+					res[i][j] += value(i,k) * op.value(k,j);
+				}
+			}
+		}
+		return new MinhaMatriz(res);
+	}
+	
+	// imprime a matriz
+	public void print(){
+		for(int i=0; i<lins(); i++){
+			for(int j=0; j<cols(); j++){
+				System.out.print(value(i,j) + " ");
+			}
+			System.out.println("");
+		}
+	}
+	
+}

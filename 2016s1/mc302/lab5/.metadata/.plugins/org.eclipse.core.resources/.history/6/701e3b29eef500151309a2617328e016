@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class VeiculoUtilitario extends Veiculo {
+
+	public VeiculoUtilitario() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

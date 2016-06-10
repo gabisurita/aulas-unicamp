@@ -1,0 +1,20 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class Caminhao2 {
+
+	private int numEixos;
+	private int capacidade;
+	
+	public Caminhao2(int numEixos, int capacidade){
+		this.numEixos = numEixos;
+		this.capacidade = capacidade;
+	}
+	
+	public int numeroDeEixos(){
+		return numEixos;
+	}
+	
+	public int capacidadeMaxima(){
+		return capacidade;
+	}
+}

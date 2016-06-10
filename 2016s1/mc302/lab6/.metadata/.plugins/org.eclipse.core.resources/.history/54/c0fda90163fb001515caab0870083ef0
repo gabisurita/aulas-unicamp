@@ -1,0 +1,17 @@
+package br.unicamp.ic.mc302.documento;
+
+public class ExemploPolimorfismoSemRedefinicao {
+
+	public static void main(String args[]) {
+		Documento d = new Documento();
+		d.imprimir();
+		d = new Carta(); // d pode tambem referenciar um objeto do tipo Carta
+		d.imprimir();
+		d.anexar(); // erro.
+		d = new Telegrama(); // d pode tambem referenciar um objeto do tipo
+								// Telegrama
+		d.imprimir();
+		d.registrar(); // erro
+		d.pagar(); // erro
+	}
+}

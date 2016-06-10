@@ -1,0 +1,28 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.HashMap;
+
+public class ControleQuartos {
+	
+	private HashMap<Integer,Quarto> quartos;
+
+	public ControleQuartos() {
+		quartos = new HashMap<Integer,Quarto>();	
+	}
+	
+	public Quarto buscaQuarto(int id){
+		return quartos.get(id);
+	}
+	
+	public String listaQuartos(){
+		return quartos.toString();
+	}
+	public void novoQuarto(Quarto q){
+		quartos.put(q.codigo(), q);
+	}
+		
+	public void removerQuarto(Quarto q){
+		quartos.remove(q.codigo());
+	}
+	
+}

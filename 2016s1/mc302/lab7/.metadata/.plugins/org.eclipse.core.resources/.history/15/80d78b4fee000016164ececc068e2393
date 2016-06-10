@@ -1,0 +1,12 @@
+package br.unicamp.ic.mc302.onibus;
+
+public class PoltronaConvencional extends Poltrona {
+
+	public PoltronaConvencional() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public double preco(){
+		return 10.0;
+	}
+}

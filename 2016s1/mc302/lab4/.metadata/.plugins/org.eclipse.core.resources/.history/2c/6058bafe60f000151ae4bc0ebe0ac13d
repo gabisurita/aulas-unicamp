@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Editor {
+
+	private Tela tela;
+	
+	public static void main(String[] args) {
+		
+		tela = new Tela();
+		tela.desenhar();
+		// TODO Auto-generated method stub
+
+	}
+
+}

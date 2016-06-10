@@ -1,0 +1,50 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class FilaVeiculo {
+	private Veiculo veiculos[];
+	private boolean vazia = true;
+	private int ultimaPosicao = 0;
+
+	public FilaVeiculo() {
+		veiculos = new Veiculo[50];
+	}
+
+	public boolean Vazia() {
+		return vazia;
+	}
+
+	public void adicionaVeiculo(String tipo, int p1, int p2, int ano, String mar, String mod,
+			String pla) {
+		if (ultimaPosicao <= 50) {
+			if (tipo.equalsIgnoreCase("Carro")) {
+				veiculos[ultimaPosicao] = new Carro(p1, p2, ano, mar, mod, pla);
+			} else {
+				if (tipo.equals("Caminhao")) {
+					veiculos[ultimaPosicao] = new Caminhao(p1, p2, ano, mar, mod, pla);
+				} else {
+					System.out.println("A Fila cont�m apenas Carro ou Caminh�o\n");
+				}
+			}
+		} else {
+			System.out.println("O veiculo n�o poder� ser adicionad, pois a fila est� cheia");
+		}
+		ultimaPosicao++;
+		vazia = false;
+	}
+
+	public void mostraFila() {
+		for (int i = 0; i < ultimaPosicao; i++) {
+			veiculos[i].mostra();
+		}
+	}
+	
+	public void ligarVeiculos() {
+		for (int i = 0; i < ultimaPosicao; i++) {
+			if(veiculos[i] instanceof Motorizado){
+				Motorizado m = (Motorizado)veiculos[i];
+				m.ligar();			
+			}
+		}		
+	}
+
+}

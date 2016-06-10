@@ -1,0 +1,25 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.Scanner;
+
+public class ReservaLugares {
+
+	public static void main(String[] args) {
+
+		Onibus meuOnibus = new Onibus(4, 40);
+		
+		
+		Scanner in = new Scanner(System.in);
+
+		
+		do{
+		
+			int lugar = in.nextInt();
+			char coluna  = in.next().chars()[0];
+			
+			char lugar = posicao.chars()[];
+			
+			
+		} while(true);	
+	}
+}

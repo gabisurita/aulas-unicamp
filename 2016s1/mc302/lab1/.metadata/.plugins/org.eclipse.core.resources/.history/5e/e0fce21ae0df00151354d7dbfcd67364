@@ -1,0 +1,21 @@
+package br.unicamp.ic.mc302.meuVetor;
+
+public class Exemplo {
+
+	 static public void main(String args[ ]){ 
+	 
+		 MeuVetor v1 = new MeuVetor(4);
+		 MeuVetor v2 = new MeuVetor(4);
+		 
+		 v1.inicializa(0, 10);
+		 v1.inicializa(1, 11);
+		 v1.inicializa(2, 12);
+		 v1.inicializa(3, 13);
+		 
+		 MeuVetor intercalado = v1.intercala(v2);
+		 
+		 intercalado.imprime();
+		 
+		 
+	 }
+}

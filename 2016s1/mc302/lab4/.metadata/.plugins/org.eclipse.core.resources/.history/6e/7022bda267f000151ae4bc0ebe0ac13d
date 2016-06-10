@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class ExemploEditor {
+
+	public static void main() {
+		
+		Editor meuEditor = new Editor();
+		
+		
+		double v[] = {0,1,2};
+
+	
+	}
+
+}

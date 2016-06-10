@@ -1,0 +1,24 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReservaLugares {
+
+	public static void main(String[] args) {
+
+		Onibus meuOnibus = new Onibus(4, 40);
+		
+		
+		Scanner in = new Scanner(System.in);
+
+		int i = in.nextInt();
+		String s = in.next();
+		
+		do{
+			System.in
+		
+		}	
+	}
+}

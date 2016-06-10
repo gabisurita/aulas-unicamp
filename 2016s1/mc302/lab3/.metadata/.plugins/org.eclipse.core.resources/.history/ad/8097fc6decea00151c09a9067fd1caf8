@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class SistemaPlanetario {
+
+	public SistemaPlanetario() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

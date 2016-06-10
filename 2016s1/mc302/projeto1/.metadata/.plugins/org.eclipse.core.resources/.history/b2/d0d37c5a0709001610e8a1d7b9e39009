@@ -1,0 +1,44 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+
+public class Reserva {
+
+	private Quarto quarto;
+	private Hospede hospede;
+	private double multa;
+	private int formaPagamento;
+	private double desconto;
+	
+	public Reserva() {
+	}
+
+	public Reserva(Quarto quarto, Hospede hospede, double multa, int formaPagamento, double desconto) {
+		
+		this.quarto = quarto;
+		this.hospede = hospede;
+		this.multa = multa;
+		this.formaPagamento = formaPagamento;
+		this.desconto = desconto;
+	}
+
+	public Quarto quarto(){
+		return this.quarto;
+	}
+
+	public Hospede hospede(){
+		return this.hospede;
+	}
+	
+	public double multa(){
+		return this.multa;
+	}
+	
+	public int formaPagamento(){
+		return this.formaPagamento;
+	}
+	
+	public double desconto(){
+		return this.desconto;
+	}
+
+}

@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.universidade;
+
+import java.util.ArrayList;
+
+public class Docente extends Pessoa {
+
+	private ArrayList<String> disciplinas;
+	
+	public Docente(String nome) {
+		super(nome);
+		disciplinas = new ArrayList<String>();
+	}
+	
+	public void atribuiDisciplina(String codigo){
+		disciplinas.add(codigo);
+	}
+
+}

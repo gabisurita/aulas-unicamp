@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.alunos;
+
+public class Graduando extends EstudanteUniversitario {
+
+	public Graduando(String nome, String cpf, String rg, String nomeDaMae, String nomeDoPai, String ra, String curso) {
+		super(nome, cpf, rg, nomeDaMae, nomeDoPai, ra, curso);
+		// TODO Auto-generated constructor stub
+	}
+
+}

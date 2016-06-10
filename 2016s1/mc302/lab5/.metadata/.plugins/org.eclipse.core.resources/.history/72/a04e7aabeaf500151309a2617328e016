@@ -1,0 +1,33 @@
+package br.unicamp.ic.mc302.universidade;
+
+import java.util.ArrayList;
+
+public class EstudanteUniveristario extends Pessoa {
+
+	private String ra;
+	private String curso;
+	private int creditos;
+	private ArrayList<Double> notas;
+	
+	
+	public EstudanteUniveristario(String nome, String ra) {
+		super(nome);
+		this.ra = ra;
+	}
+	
+	public void defineCurso(String curso){
+		this.curso = curso;
+	}
+	
+	public void adicionaCreditos(int c, Double nota){
+		creditos += c;
+		notas.add(nota);
+	}
+
+	public void imprimeInfo(){
+		super.imprimeInfo();
+		System.out.println("RA: "+ra);
+		System.out.println("Curso: "+curso);
+		System.out.println("Creditos concluidos: "+creditos);
+	}
+}

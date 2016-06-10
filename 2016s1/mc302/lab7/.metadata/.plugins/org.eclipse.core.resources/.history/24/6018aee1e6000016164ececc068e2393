@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.onibus;
+
+public abstract class Onibus {
+
+	public Onibus() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,13 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class CorpoCeleste {
+	
+	private String nome;
+	private double massa;
+	private double diametro;
+	
+	public String getNome(){return nome;}
+
+	public double densidade()
+	
+}

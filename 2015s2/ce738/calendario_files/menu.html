@@ -1,0 +1,194 @@
+
+<!-- saved from url=(0105)http://webensino.unicamp.br:8080/cursos/aplic/menu.php?&cod_curso=124459&time=1439674378&cod_ferramenta=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>TelEduc</title><link rel="stylesheet" type="text/css" href="teleduc.css"><style type="text/css">
+  .block {
+    font-family: sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #00ffff;
+    position: absolute;
+    visibility: hidden;
+  }
+  a {
+    text-decoration:none;
+  }
+  .marcado {
+    color:yellow;
+  }
+  .normal {
+    color:white;
+  }
+  .logo {
+    padding-top: 5px;
+  }
+  .lista {
+    font-size: 7pt;
+  }
+</style><script language="javascript" src="dhtmllib.js"></script><script language="javascript">
+var cont_layer_iniciar;
+var x_inicial=10;
+var y_inicial=2;
+var numero_itens=44;
+var menu=new Array(numero_itens);
+var menu_a=new Array(numero_itens);
+var menu_h=new Array(numero_itens);
+var ultimo=-1;
+var item_antigo=-1;
+function init()
+{
+  for (var i=0; i<menu.length; i++)
+  {
+    menu[i]=getLayer('menu'+i);
+    menu_a[i]=getLayer('menu'+i+'a');
+    if (menu[i]==null)
+      break;
+    ultimo=i;
+    moveLayerTo(menu[i],x_inicial,y_inicial);
+    moveLayerTo(menu_a[i],x_inicial,y_inicial);
+    y_inicial = y_inicial + menu_h[i];
+    showLayer(menu[i]);
+    hideLayer(menu_a[i]);
+  }
+  marcar(cont_layer_iniciar);
+}
+function marcar(item)
+{
+  if (item_antigo!=-1 && item_antigo!=item)
+  {
+    hideLayer(menu_a[item_antigo]);
+    showLayer(menu[item_antigo]);
+  }
+  showLayer(menu_a[item]);
+  hideLayer(menu[item]);
+  item_antigo=item;
+}
+</script></head>
+  
+
+
+
+<body link="#ffffff" vlink="#ffffff" background="fundo.jpg" onload="init();">
+<div id="menu0" class="block" style="width: 180px; left: 10px; top: 2px; visibility: visible;"><small class="normal">Mudar para:<small>
+<select class="lista" name="lista" size="1" onchange="javascript: window.open(this.options[this.selectedIndex].value,&#39;_top&#39;);">
+<option value="index.php?cod_curso=127059">HZ291-A</option>
+<option value="index.php?cod_curso=124459" selected="selected">CE738-B</option>
+</select><br>
+<div class="logo"><img src="teleduc_logo.gif" border="0"></div><br></small></small></div><small class="normal"><small>
+<div id="menu0a" class="block" style="width: 180px; left: 10px; top: 2px; visibility: hidden;"></div><div id="menu1" class="block" style="width: 180px; left: 10px; top: 82px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/estrutura/estrutura.php?&cod_curso=124459&cod_ferramenta=17" target="direita" class="normal" onclick="marcar(1);"><nobr><img src="estrela1.gif" border="0"> <b>Estrutura do Ambiente</b></nobr></a></font>
+</div>
+<div id="menu1a" class="block" style="width: 180px; left: 10px; top: 82px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/estrutura/estrutura.php?&cod_curso=124459&cod_ferramenta=17" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Estrutura do Ambiente</b></nobr></a></font>
+</div>
+<div id="menu2" class="block" style="width: 180px; left: 10px; top: 95px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu2a" class="block" style="width: 180px; left: 10px; top: 95px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu3" class="block" style="width: 180px; left: 10px; top: 101px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/dinamica/dinamica.php?&cod_curso=124459&cod_ferramenta=16" target="direita" class="normal" onclick="marcar(3);"><nobr><img src="estrela1.gif" border="0"> <b>Dinâmica do Curso<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu3a" class="block" style="width: 180px; left: 10px; top: 101px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/dinamica/dinamica.php?&cod_curso=124459&cod_ferramenta=16" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Dinâmica do Curso<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu4" class="block" style="width: 180px; left: 10px; top: 114px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/agenda/agenda.php?&cod_curso=124459&cod_ferramenta=1" target="direita" class="normal" onclick="marcar(4);"><nobr><img src="estrela1.gif" border="0"> <b>Agenda<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu4a" class="block" style="width: 180px; left: 10px; top: 114px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/agenda/agenda.php?&cod_curso=124459&cod_ferramenta=1" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Agenda<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu5" class="block" style="width: 180px; left: 10px; top: 127px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/avaliacoes/avaliacoes.php?&cod_curso=124459&cod_ferramenta=22" target="direita" class="normal" onclick="marcar(5);"><nobr><img src="estrela1.gif" border="0"> <b>Avaliações</b></nobr></a></font>
+</div>
+<div id="menu5a" class="block" style="width: 180px; left: 10px; top: 127px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/avaliacoes/avaliacoes.php?&cod_curso=124459&cod_ferramenta=22" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Avaliações</b></nobr></a></font>
+</div>
+<div id="menu6" class="block" style="width: 180px; left: 10px; top: 140px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu6a" class="block" style="width: 180px; left: 10px; top: 140px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu7" class="block" style="width: 180px; left: 10px; top: 146px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/material/material.php?&cod_curso=124459&cod_ferramenta=3" target="direita" class="normal" onclick="marcar(7);"><nobr><img src="estrela1.gif" border="0"> <b>Atividades</b></nobr></a></font>
+</div>
+<div id="menu7a" class="block" style="width: 180px; left: 10px; top: 146px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/material/material.php?&cod_curso=124459&cod_ferramenta=3" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Atividades</b></nobr></a></font>
+</div>
+<div id="menu8" class="block" style="width: 180px; left: 10px; top: 159px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/material/material.php?&cod_curso=124459&cod_ferramenta=4" target="direita" class="normal" onclick="marcar(8);"><nobr><img src="estrela1.gif" border="0"> <b>Material de Apoio<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu8a" class="block" style="width: 180px; left: 10px; top: 159px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/material/material.php?&cod_curso=124459&cod_ferramenta=4" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Material de Apoio<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu9" class="block" style="width: 180px; left: 10px; top: 172px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/enquete/enquete.php?&cod_curso=124459&cod_ferramenta=24" target="direita" class="normal" onclick="marcar(9);"><nobr><img src="estrela1.gif" border="0"> <b>Enquetes</b></nobr></a></font>
+</div>
+<div id="menu9a" class="block" style="width: 180px; left: 10px; top: 172px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/enquete/enquete.php?&cod_curso=124459&cod_ferramenta=24" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Enquetes</b></nobr></a></font>
+</div>
+<div id="menu10" class="block" style="width: 180px; left: 10px; top: 185px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu10a" class="block" style="width: 180px; left: 10px; top: 185px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu11" class="block" style="width: 180px; left: 10px; top: 191px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/forum/forum.php?&cod_curso=124459&cod_ferramenta=9" target="direita" class="normal" onclick="marcar(11);"><nobr><img src="estrela1.gif" border="0"> <b>Fóruns de Discussão</b></nobr></a></font>
+</div>
+<div id="menu11a" class="block" style="width: 180px; left: 10px; top: 191px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/forum/forum.php?&cod_curso=124459&cod_ferramenta=9" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Fóruns de Discussão</b></nobr></a></font>
+</div>
+<div id="menu12" class="block" style="width: 180px; left: 10px; top: 204px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/correio/correio.php?&cod_curso=124459&cod_ferramenta=11" target="direita" class="normal" onclick="marcar(12);"><nobr><img src="estrela.gif" border="0"> <b>Correio</b></nobr></a></font>
+</div>
+<div id="menu12a" class="block" style="width: 180px; left: 10px; top: 204px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/correio/correio.php?&cod_curso=124459&cod_ferramenta=11" target="direita" class="marcado"><nobr><img src="estrela.gif" border="0"> <b>Correio</b></nobr></a></font>
+</div>
+<div id="menu13" class="block" style="width: 180px; left: 10px; top: 217px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu13a" class="block" style="width: 180px; left: 10px; top: 217px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu14" class="block" style="width: 180px; left: 10px; top: 223px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/grupos/grupos.php?&cod_curso=124459&cod_ferramenta=12" target="direita" class="normal" onclick="marcar(14);"><nobr><img src="estrela1.gif" border="0"> <b>Grupos</b></nobr></a></font>
+</div>
+<div id="menu14a" class="block" style="width: 180px; left: 10px; top: 223px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/grupos/grupos.php?&cod_curso=124459&cod_ferramenta=12" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Grupos</b></nobr></a></font>
+</div>
+<div id="menu15" class="block" style="width: 180px; left: 10px; top: 236px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/perfil/perfil.php?&cod_curso=124459&cod_ferramenta=13" target="direita" class="normal" onclick="marcar(15);"><nobr><img src="estrela1.gif" border="0"> <b>Perfil</b></nobr></a></font>
+</div>
+<div id="menu15a" class="block" style="width: 180px; left: 10px; top: 236px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/perfil/perfil.php?&cod_curso=124459&cod_ferramenta=13" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Perfil</b></nobr></a></font>
+</div>
+<div id="menu16" class="block" style="width: 180px; left: 10px; top: 249px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/portfolio/portfolio.php?&cod_curso=124459&cod_ferramenta=15" target="direita" class="normal" onclick="marcar(16);"><nobr><img src="estrela1.gif" border="0"> <b>Portfólio<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu16a" class="block" style="width: 180px; left: 10px; top: 249px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/portfolio/portfolio.php?&cod_curso=124459&cod_ferramenta=15" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Portfólio<img src="maozinha.gif" border="0"></b></nobr></a></font>
+</div>
+<div id="menu17" class="block" style="width: 180px; left: 10px; top: 262px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu17a" class="block" style="width: 180px; left: 10px; top: 262px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu18" class="block" style="width: 180px; left: 10px; top: 268px; visibility: visible;"><img src="hr1.gif" border="0"></div>
+<div id="menu18a" class="block" style="width: 180px; left: 10px; top: 268px; visibility: hidden;"><img src="hr1.gif" border="0"></div><div id="menu19" class="block" style="width: 180px; left: 10px; top: 276px; visibility: visible;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/configurar/configurar.php?&cod_curso=124459&cod_ferramenta=0" target="direita" class="normal" onclick="marcar(19);"><nobr><img src="estrela1.gif" border="0"> <b>Configurar</b></nobr></a></font>
+</div>
+<div id="menu19a" class="block" style="width: 180px; left: 10px; top: 276px; visibility: hidden;">
+<font class="textsmall"><a href="http://webensino.unicamp.br:8080/cursos/aplic/configurar/configurar.php?&cod_curso=124459&cod_ferramenta=0" target="direita" class="marcado"><nobr><img src="estrela1.gif" border="0"> <b>Configurar</b></nobr></a></font>
+</div>
+<div id="menu20" class="block" style="width: 180px; left: 10px; top: 289px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu20a" class="block" style="width: 180px; left: 10px; top: 289px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu21" class="block" style="width: 180px; left: 10px; top: 295px; visibility: visible;"><font class="textsmall"><a href="http://webensino.unicamp.br:8080/pagina_inicial/index.php?" target="_top" class="normal"><img src="estrela1.gif" border="0"> <b>Voltar</b></a></font>
+</div><div id="menu21a" class="block" style="width: 180px; left: 10px; top: 295px; visibility: hidden;"><font class="textsmall"><a href="http://webensino.unicamp.br:8080/pagina_inicial/index.php?" target="_top" class="normal"><img src="estrela1.gif" border="0"> <b>Voltar</b></a></font>
+</div><div id="menu22" class="block" style="width: 180px; left: 10px; top: 308px; visibility: visible;"><img src="hr.gif" border="0"></div>
+<div id="menu22a" class="block" style="width: 180px; left: 10px; top: 308px; visibility: hidden;"><img src="hr.gif" border="0"></div><div id="menu23" class="block" style="width: 180px; left: 10px; top: 314px; visibility: visible;"><br><img src="teleduc.gif" border="0"><br></div>
+<div id="menu23a" class="block" style="width: 180px; left: 10px; top: 314px; visibility: hidden;"></div><script language="javascript">
+  cont_layer_iniciar=4;
+  menu_h[0]=80;
+  menu_h[1]=13;
+  menu_h[2]=6;
+  menu_h[3]=13;
+  menu_h[4]=13;
+  menu_h[5]=13;
+  menu_h[6]=6;
+  menu_h[7]=13;
+  menu_h[8]=13;
+  menu_h[9]=13;
+  menu_h[10]=6;
+  menu_h[11]=13;
+  menu_h[12]=13;
+  menu_h[13]=6;
+  menu_h[14]=13;
+  menu_h[15]=13;
+  menu_h[16]=13;
+  menu_h[17]=6;
+  menu_h[18]=8;
+  menu_h[19]=13;
+  menu_h[20]=6;
+  menu_h[21]=13;
+  menu_h[22]=6;
+</script>
+
+
+</small></small></body></html>

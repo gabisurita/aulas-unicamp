@@ -1,0 +1,36 @@
+.text
+{
+  font-family: arial, verdana;
+  font-size: 10pt;
+}
+
+.textsmall
+{
+  font-family: arial, verdana;
+  font-size: 9pt;
+}
+
+.textlink
+{
+
+}
+
+.g1field
+{
+  background-color: #e8e8e8;
+}
+
+.g2field
+{
+  background-color: #f8f8f8;
+}  
+
+.g3field
+{
+  background-color: #d8d8d8;
+}
+
+.wtfield
+{
+  background-color: #FFFFFF;
+}  

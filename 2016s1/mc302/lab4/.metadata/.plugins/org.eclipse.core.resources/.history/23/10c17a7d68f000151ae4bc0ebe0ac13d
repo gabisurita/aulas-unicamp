@@ -1,0 +1,25 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class ExemploEditor {
+
+	public static void main() {
+		
+		Editor meuEditor = new Editor();
+		Tela tela = meuEditor.minhaTela();
+		
+		// Adiciona Poligono
+		double v[] = {0,1,2};
+		meuEditor.adicionaFigura(new Poligono(tela, 3, v));
+		
+		// Adiciona Linha
+		meuEditor.adicionaFigura(new Linha(tela, -1, 1));
+		
+		// Adiciona grupo com duas retas 
+		Grupo grupo = new Grupo(tela);
+		grupo.adicionaFigura(new Linha(tela, -2, -2));
+		
+		
+		meuEditor.exibeTela();
+	}
+
+}

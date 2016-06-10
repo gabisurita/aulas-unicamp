@@ -1,0 +1,29 @@
+package br.unicamp.ic.mc302.meuVetor;
+
+public class Exemplo {
+
+	 static public void main(String args[ ]){ 
+	 
+		 MeuVetor v1 = new MeuVetor(4);
+		 MeuVetor v2 = new MeuVetor(4);
+		 
+		 // Inicializa v1 com 0,1,2,3 e v2 = v1^2
+		 for(int i=0; i<4; i++){
+			 v1.inicializa(i,i);
+			 v2.inicializa(i,i*i);
+		 }
+		 
+
+		 // Imprime os vetores originais
+		 v1.imprime();
+		 v2.imprime();
+		 
+		 // Cria vetor intercalado
+		 MeuVetor intercalado = v1.intercala(v2);
+		 
+		 // Imprime o vetor intercalado
+		 intercalado.imprime();
+		 
+		 
+	 }
+}

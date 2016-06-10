@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class ExemploSistema {
+
+	public static void main(String[] args) {
+		Estrela Sol = new Estrela("Sol","3000000", "600000");
+
+	}
+
+}

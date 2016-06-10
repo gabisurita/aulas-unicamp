@@ -1,0 +1,24 @@
+Nome: R. de Castro Surita
+RA: 139095
+
+Lab11 - MC302
+
+5. A compilação falha sem o modificador "public" pois a visbilidade do método 
+sem modificador é, por padrão, a visibilidade por pacote. Como Principal2 não 
+esta no pacote "geometria" da classe Criculo a chamada do método mostra() falha.
+Modificar o método para protected não soluciona o problema pois o método que
+Principal2 faz referência à Criculo é por instanciação e não herança.
+
+6. A compilação falha, o que indica que arquivos presentes em um subpacote não
+são considerados como pertencentes ao pacote para fins de compilação na 
+linguagem java. O mesmo que vale para os métodos de uma classe acontece para as
+classes, como indica o erro ao retirar o modificador public da classe Circulo.
+
+7. A compilação falha pois apesar de CirculoComBorda ser filho de Circulo, no 
+método "main" o que esta acontecendo é a criação de um objeto Circulo e neste 
+objeto há uma tentativa de acessar um método protegido, o que não é permitido
+pela linguagem.
+
+
+
+

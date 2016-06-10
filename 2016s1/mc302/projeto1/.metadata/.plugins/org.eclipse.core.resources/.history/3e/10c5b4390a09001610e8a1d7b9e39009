@@ -1,0 +1,84 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Scanner;
+
+public class ControladorDeEntrada {
+
+	private ControleReservas cont;
+	private ControladorDeSaida out;
+	
+	Scanner in;
+	
+	public ControladorDeEntrada() {	
+		
+		in = new Scanner(System.in);
+	}
+
+	public void login(){
+		
+		System.out.println("Nome");
+		String login = in.next();
+		System.out.println("Senha");
+		String senha = in.next();
+		
+		cont.login(login, senha);
+	}
+	
+	public void menuPrincipal(){
+		
+		out.menuPrincipal();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1:
+				menuReservas();
+				break;
+			case 2:
+				menuQuartos();
+				break;
+			case 3:
+				menuHospedes();
+				break;
+			case 4:
+				menuFuncionarios();
+				break;
+			case 0:
+				cont.logout();
+				break;
+		}
+	}
+
+	public void menuReservas(){
+
+		out.menuPrincipal();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1:
+				menuReservas();
+				break;
+			case 2:
+				menuQuartos();
+				break;
+			case 3:
+				menuHospedes();
+				break;
+			case 4:
+				menuFuncionarios();
+				break;
+			case 0:
+				menuPrincipal();
+				break;
+		}
+	}
+	
+	public void menuQuartos(){
+	}
+	
+	public void menuHospedes(){
+	}
+	
+	public void menuFuncionarios(){
+	}
+
+}

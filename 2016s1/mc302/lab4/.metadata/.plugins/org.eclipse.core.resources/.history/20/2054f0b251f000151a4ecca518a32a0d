@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class Motor {
+	
+	private boolean ligado;
+	
+	public void ligar{
+		return;
+	}
+
+}

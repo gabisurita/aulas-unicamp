@@ -1,0 +1,33 @@
+package br.unicamp.ic.mc302.veiculos;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
+
+import br.unicamp.ic.mc302.motor.Motor;
+
+public class Veiculo {
+
+	Motor motor;
+	EstadoVeiculo estado;
+	
+	Veiculo() {	
+		motor = new Motor();
+	}
+	
+	public void ligar() {
+		
+		motor.ligar();
+		System.out.println("--- carro ligado ---");
+	}
+	
+	public void andar(){
+		estado.andar();
+	}
+	
+	public void mudarEstado(){
+		
+		if(estado instanceof VeiculoTerrestre){
+			
+		}
+	}
+
+}

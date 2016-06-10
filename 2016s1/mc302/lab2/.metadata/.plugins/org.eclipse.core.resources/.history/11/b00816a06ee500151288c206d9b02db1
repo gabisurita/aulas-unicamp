@@ -1,0 +1,26 @@
+package br.unicamp.ic.mc302.minhaMatriz;
+
+class TestaMatriz {
+	
+    public static void main (String [] args) {
+    	
+    	int Aval[][] = {{1,2},{3,4}};
+    	int Bval[][] = {{1,1},{1,1}};
+    	
+    	
+    	MinhaMatriz MatA = new MinhaMatriz(Aval);
+    	MinhaMatriz MatB = new MinhaMatriz(Bval);
+    	
+    	MatA.print();
+
+    	System.out.println(MatA.lins());
+    	
+    	MatA.prod(MatB);
+    	
+    	System.out.println("");
+    	
+
+    	
+    }
+}
+

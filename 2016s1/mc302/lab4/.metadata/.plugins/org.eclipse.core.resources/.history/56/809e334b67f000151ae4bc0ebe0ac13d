@@ -1,0 +1,19 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Editor {
+	
+	private Tela tela;
+	
+	public Editor(){
+		tela = new Tela();
+	}
+
+	public Tela minhaTela(){
+		return tela;
+	}
+	
+	public void exibeTela(){
+		tela.desenhar();
+	}
+	
+}

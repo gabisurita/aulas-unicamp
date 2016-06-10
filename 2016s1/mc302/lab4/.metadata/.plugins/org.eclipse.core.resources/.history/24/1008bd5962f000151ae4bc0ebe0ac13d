@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Poligono extends Figura {
+
+	public Poligono() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

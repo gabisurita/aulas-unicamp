@@ -1,0 +1,47 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Editor {
+	
+	private Tela tela;
+	
+	public Editor(){
+		tela = new Tela();
+	}
+	
+	public void novoPoligono(int l, double v[][]){
+		tela.novoPoligono(l, v);
+	}
+	
+	public void novaLinha(double xi, double yi, double xf, double yf){
+		tela.novaLinha(x, y);
+	}
+	
+	public void novoCirculo(double r, double cx, double cy){
+		tela.novoCirculo(r, c);
+	}
+	
+	public void novoGrupo(int n){
+		tela.novoGrupo(n);
+	}
+	
+	public void adicionaPoligono(int l, double v[][]){
+		tela.adicionaPoligono(l, v);
+	}
+	
+	public void adicionaLinha(double xi, double yi, double xf, double yf){
+		tela.adicionaLinha(x, y);
+	}
+	
+	public void adicionaCirculo(double r, double cx, double cy){
+		tela.adicionaCirculo(r, c);
+	}
+	
+	public void fechaGrupo(){
+		tela.fechaGrupo();
+	}
+	
+	public void exibeTela(){
+		tela.desenhar();
+	}
+	
+}

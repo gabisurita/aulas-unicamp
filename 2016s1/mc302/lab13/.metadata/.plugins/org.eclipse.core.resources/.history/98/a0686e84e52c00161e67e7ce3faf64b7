@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.veiculosMeta;
+
+abstract class Veiculo {
+
+	private int placa;
+
+	public void mostrar() { // imprime dados do ve�culo
+		System.out.println("PLACA: " + placa);
+	}
+}

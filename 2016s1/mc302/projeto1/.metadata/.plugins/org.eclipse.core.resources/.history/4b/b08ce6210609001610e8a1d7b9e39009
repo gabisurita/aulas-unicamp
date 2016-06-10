@@ -1,0 +1,53 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+public class ControladorDeSaida {
+
+	public ControladorDeSaida() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void menuPrincipal(){
+		System.out.println(""
+				+ "1. Reservas\n"
+				+ "2. Quartos\n"
+				+ "3. Hospedes\n"
+				+ "4. Funcionários\n"
+				+ "\n"
+				+ "0. Sair\n"
+				);
+	}
+
+	public void menuReservas(){
+		System.out.println(""
+				+ "1. Lista de Reservas\n"
+				+ "2. Buscar Reserva\n"
+				+ "3. Criar Reserva"
+				+ "\n"
+				+ "0. Voltar ao menu anterior\n"
+				);
+	}
+	
+	public void menuHospedes(){
+		System.out.println(""
+				+ "1. Lista de Hospedes\n"
+				+ "2. Buscar Hospede\n"
+				+ "3. Adicionar Hospede\n"
+				+ "\n"
+				+ "0. Voltar ao menu anterior\n"
+				);
+	}
+	
+	public void menuFuncionarios(){
+		System.out.println(""
+				+ "1. Lista de Funcionarios\n"
+				+ "2. Buscar funcionario\n"
+				+ "3. Adicionar Funcionario\n"
+				+ "\n"
+				+ "0. Voltar ao menu anterior\n"
+				);
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class Planeta extends CorpoCeleste {
+
+	int posicaoSolar;
+	
+	public Planeta(String nome, double massa, double diametro) {
+		super(nome, massa, diametro);
+	}
+
+}

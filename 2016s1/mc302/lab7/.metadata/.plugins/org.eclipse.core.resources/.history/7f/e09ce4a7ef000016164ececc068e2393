@@ -1,0 +1,35 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.ArrayList;
+
+public abstract class Onibus {
+
+	private int id;
+	
+	private int fileiras;
+	private int poltronas;
+	
+	private ArrayList<Fileira> fileiras;
+	
+	public Onibus(int id) {
+		this.id = id; 
+	}
+
+	protected void setFileiras(ArrayList<Fileira> fileiras){
+		this.fileiras = fileiras;
+	}
+	
+	public abstract void defineFileiras();
+	
+	public boolean ocupar(int fileira, char coluna){
+		return fileiras.get(fileira).ocupar(coluna);
+	}
+	
+	public boolean desocupar(int fileira, char coluna){
+		return fileiras.get(fileira).desocupar(coluna);
+	}
+	
+	public boolean ocupada(int fileira, char coluna){
+		return fileiras.get(fileira).ocupada(coluna);
+	}
+}

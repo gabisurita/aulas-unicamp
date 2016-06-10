@@ -1,0 +1,43 @@
+Nome: R. de Castro Surita  
+RA: 139095
+
+1. Modificando as variáveis para {int, byte, byte} o resultado compila sem
+problemas, pois os tipos, apesar de não serem os mesmos utilizados na declaração
+do gerador da classe, são compatíveis com os mesmos utilizando polimorfismo de
+coerção. Modificar as varíaveis para {float, float, float} faz com que o erro
+retorne, pois nesse caso a coerção não é válida (float para int).
+
+2.b. O exercício mostra que é possível, através de sobrecarga, criar geradores
+mais especializados com assinaturas diferentes a partir de um gerador mais
+genérico (com mais parâmetros) reaproveitando o código do primeiro a partir de 
+uma chamada "this(...)".
+
+3. A compilação falha pois os métoodos anexar, registrar e pagar são definidos
+apenas na classe Carta. Ao se utilizar polimorfismo de inclusão os métodos 
+exclusivos dos filhos não estão disponíveis em objetos tipados para a classe 
+pai. É possível corrigir o problema usando casting pois nesse caso o programa
+explicitamente faz a troca do apontador mais genérico para um apontador mais
+específico que contem os métodos refenciados. O uso de "instanceof" permite
+verificar se o casting é válido para determinado objeto.
+
+4. O que é possível observar é que quando se utiliza o polimorfismo de inclusão
+com redefinição de operações sempre que um método que é definido no pai e 
+redefinido no filho, o código executado é o do filho. No caso, o método 
+definido no filho faz referência a chamada definida no pai por meio da 
+referência super.
+
+5. O código acusa erro de compilação pois a classe ContaEsp tenta reescrever o 
+método debitar() definido como final da classe pai ContaCor. O modificador 
+final tem a propriedade de implementar a propriedade de acoplamento estático,
+que não permite redefinição. Ao atribuir o modificador final método à definição 
+de debitar() em ContaEsp, a compilação não acusa erros pois esta classe não
+possui filhos e portanto não tem nenhuma tentativa de redefinição.
+
+6. Neste caso o erro referênciado anteriormente volta a acontecer, pois há 
+novamente uma tentativa de reescrever um método modificado com final.
+
+7. Ao modificar a visibilidade da operação mostra() redefinida em carro, o 
+resultado não acusa erros, pois a liguagem Java não permite que a redefinição
+de operações altere a visibilidade definida no pai.
+
+8.

@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Circulo extends Figura {
+
+	private double raio;
+	private double centro;
+	
+	public Circulo(double r, double c){
+		super();
+		
+		raio = r;
+		centro = c;
+		
+	}
+}

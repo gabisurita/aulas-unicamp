@@ -1,0 +1,419 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Scanner;
+
+import br.unicamp.ic.mc302.dadosPessoais.*;
+import br.unicamp.ic.mc302.dataHora.Periodo;
+
+public class ControleEntrada {
+
+	private ControleReservas reservas;
+	private ControleQuartos quartos;
+	private ControleHospedes hospedes;
+	private ControleOcupacao ocupacao;
+	private ControleFuncionarios funcionarios;
+	private ControleLogin login;
+
+	
+	private ControleSaida out;
+	
+	Scanner in;
+	
+	public ControleEntrada(ControleReservas reservas, ControleQuartos quartos, ControleHospedes hospedes,
+			ControleFuncionarios funcionarios, ControleOcupacao ocupacao, ControleLogin login, ControleSaida out) {	
+		
+		this.reservas = reservas;
+		this.quartos = quartos;
+		this.hospedes = hospedes;
+		this.funcionarios = funcionarios;
+		this.ocupacao = ocupacao;
+		this.login = login;		
+		this.out = out;
+		
+		in = new Scanner(System.in);
+	}
+	
+	private int getInt(String campo){
+		out.println(campo);
+		return in.nextInt();
+	}
+	
+	private String getString(String campo){
+		out.println(campo);
+		return in.next();
+	}
+	
+	private double getDouble(String campo){
+		out.println(campo);
+		return in.nextDouble();
+	}
+	
+	public void inicio(){
+		
+		out.println("INICIO\n");
+		int op = getInt("1. Login\n2. Sair\n");
+		
+		if(op==1)
+			login();
+		if(op==2)
+			return;
+		
+		inicio();
+	}
+	
+	public void login(){
+		
+		out.println("LOGIN");
+		
+		if(login.login(getString("Nome:"), getString("Senha:"))){
+			menuPrincipal();
+		}
+		else{
+			out.println("Login/senha incorretos\n");
+		}
+	}
+	
+	public void menuPrincipal(){
+		
+		out.menuPrincipal();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				menuReservas();
+				break;
+			case 2: 
+				menuQuartos();
+				break;
+			case 3:	
+				menuHospedes();
+				break;
+			case 4:	
+				menuFuncionarios();
+				break;
+			case 0: 
+				login.logout();
+				break;
+		}
+	}
+
+	public void menuReservas(){
+
+		out.menuReservas();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1:
+				out.println(reservas.listaReservas());
+				menuReservas();
+				break;
+			case 2: 
+				menuReserva(reservas.buscaReserva(getInt("Numero da reserva:")));
+				break;
+			case 3:
+				novaReserva();
+				menuReservas();
+				break;
+			case 0:
+				menuPrincipal();
+				break;
+		}
+	}
+	
+	public void menuQuartos(){
+
+		out.menuQuartos();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				out.println(quartos.listaQuartos());
+				menuQuartos();
+				break;
+			case 2: 
+				menuQuarto(quartos.buscaQuarto(getInt("Numero do quarto:")));
+				break;
+			case 3:	
+				novoQuarto();
+				menuQuartos();
+				break;
+			case 0:	
+				menuPrincipal();
+				break;
+		}
+	}
+	public void menuHospedes(){
+
+		out.menuHospedes();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				out.println(hospedes.listaHospedes());
+				menuHospedes();
+				break;
+			case 2: 
+				menuHospede(hospedes.buscaHospede(getString("Nome do Hospede:")));
+				break;
+			case 3:	
+				novoHospede();
+				menuHospedes();
+				break;
+			case 0:	
+				menuPrincipal();
+				break;
+		}
+	}
+	
+	public void menuFuncionarios(){
+
+		out.menuFuncionarios();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				out.println(funcionarios.listaFuncionarios());
+				menuFuncionarios();
+				break;
+			case 2: 
+				menuFuncionario(funcionarios.buscaFuncionario(getString("Nome do Funcionario:")));
+				break;
+			case 3:	
+				novoFuncionario();
+				menuFuncionarios();
+				break;
+			case 0:	
+				menuPrincipal();
+				break;
+		}
+	}
+
+	public void menuReserva(Reserva r){
+	
+		out.menuReserva(r);
+		
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				r.confirmar();
+				menuReservas();
+				break;
+			case 2: 
+				editarReserva(r);
+				menuReservas();
+				break;
+			case 3:	
+				reservas.removerReserva(r);
+				menuReservas();
+				break;
+			
+			case 0:	
+				menuReservas();
+				break;
+		}
+		
+	}
+	
+	public void menuQuarto(Quarto q){
+		
+		out.menuQuarto(q);
+		
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				editarQuarto(q);
+				menuQuartos();
+				break;
+			case 2: 
+				quartos.removerQuarto(q);
+				break;
+			case 0:	
+				menuQuartos();
+				break;
+		}
+	}
+	
+	public void menuHospede(Hospede h){
+	
+		out.menuHospede(h);
+	
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				editarHospede(h);
+				menuHospedes();
+				break;
+			case 2: 
+				hospedes.removerHospede(h);
+				break;
+			case 0:	
+				menuHospedes();
+				break;
+		}	
+	}
+	
+	public void menuFuncionario(Funcionario f){
+	
+		out.menuFuncionario(f);
+		
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: 
+				editarFuncionario(f);
+				menuFuncionarios();
+				break;
+			case 2: 
+				funcionarios.removerFuncionario(f);
+				break;
+			case 0:	
+				menuFuncionarios();
+				break;
+		}	
+	}
+	
+	public void editarReserva(Reserva r){
+		
+		reservas.editarReserva(r);
+	}
+	
+	public void editarQuarto(Quarto q){
+		
+		quartos.removerQuarto(q);
+		novoQuarto();
+	}
+	
+	public void editarHospede(Hospede h){
+		
+		hospedes.removerHospede(h);
+		novoHospede();
+	}
+	
+	public void editarFuncionario(Funcionario f){
+	
+		funcionarios.removerFuncionario(f);
+		novoFuncionario();
+	}
+	
+	public void novaReserva(){
+	
+		int n = getInt("Cadastrar novo hospede? 1.Sim  2.Nao");
+		
+		if(n == 1)
+			novoHospede();
+		
+		Reserva r = new Reserva(
+				reservas.novoNumeroReserva(),
+				getInt("tipo: "+QuartoSolteiro.id+".Solteiro "+QuartoCasal.id+".Casal "+QuartoSuiteLuxo.id+".Luxo"),
+				hospedes.buscaHospede(getString("nome do hospede: ")),
+				new Periodo(
+						getInt("Chegada\ndia:"),
+						getInt("mes:"),
+						getInt("ano:"),
+						getInt("hora:"),
+						getInt("minuto:"),
+						getInt("Saida\ndia:"),
+						getInt("mes:"),
+						getInt("ano:"),
+						getInt("hora:"),
+						getInt("minuto:")
+				),
+				getDouble("multa de cancelamento: "),
+				getInt("forma de pagamento:"+Reserva.dinheiro+".Dinheiro "+Reserva.cartao+".Cartao "+Reserva.cheque+".Cheque"),
+				getDouble("desconto: ")
+		);
+		
+		reservas.novaReserva(r);
+		out.println("Código da reserva: "+r.id()+"\n");
+	}
+	
+	public void novoQuarto(){
+		
+		int tipo = getInt("tipo: "+QuartoSolteiro.id+".Solteiro "+QuartoCasal.id+".Casal "+QuartoSuiteLuxo.id+".Luxo");
+		
+		Quarto q = null;
+		
+		if(tipo == QuartoSolteiro.id){
+			q = new QuartoSolteiro(
+					getInt("codigo:"),
+					getDouble("Preco:"),
+					getInt("capacidade:"),
+					getString("descricao:")
+			);
+		}
+		
+		else if(tipo == QuartoCasal.id){
+			q = new QuartoCasal(
+					getInt("codigo:"),
+					getDouble("Preco:"),
+					getInt("capacidade:"),
+					getString("descricao:")
+			);
+		}
+
+		else if(tipo == QuartoSuiteLuxo.id){
+			q = new QuartoSuiteLuxo(
+					getInt("codigo:"),
+					getDouble("Preco:"),
+					getInt("capacidade:"),
+					getString("descricao:")
+			);
+		}
+		
+		if(q!= null)
+			quartos.novoQuarto(q);
+	}
+	
+	public void novoHospede(){
+		
+		Hospede h = new Hospede(
+				getString("nome:"),
+				new Documento(
+						getString("documento"),
+						getInt("tipo: "+Documento.RG+".RG "+Documento.CPF+".CPF "+Documento.passaporte+".passaporte")
+				),
+				new Endereco(
+						getString("rua/avenida:"),
+						getInt("numero:"),
+						getString("complemento:"),
+						getString("bairro:"),
+						getString("cidade:"),
+						getString("UF:"),
+						getString("pais:")
+				),
+				getString("nacionalidade:"),
+				getString("email:"),
+				getString("telefone:")
+		);
+		
+		hospedes.novoHospede(h);
+	}
+	
+	public void novoFuncionario(){
+		
+		Funcionario f = new Funcionario(
+				getString("nome:"),
+				new Documento(
+						getString("documento"),
+						getInt("tipo: "+Documento.RG+".RG "+Documento.CPF+".CPF "+Documento.passaporte+".passaporte")
+				),
+				new Endereco(
+						getString("rua/avenida:"),
+						getInt("numero:"),
+						getString("complemento:"),
+						getString("bairro:"),
+						getString("cidade:"),
+						getString("UF:"),
+						getString("pais:")
+				),
+				getString("telefone:"),
+				getString("senha:")
+		);
+		
+		funcionarios.novoFuncionario(f);
+	}
+	
+}

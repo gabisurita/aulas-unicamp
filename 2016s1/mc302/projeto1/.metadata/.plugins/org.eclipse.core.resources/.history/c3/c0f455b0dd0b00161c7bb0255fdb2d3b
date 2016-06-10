@@ -1,0 +1,18 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import br.unicamp.ic.mc302.dataHora.DataHora;
+
+public class ExemploHotel {
+
+	public static void main(String[] args) {
+		
+		SistemaReservas s = new SistemaReservas();
+		s.alterarHora(new DataHora(23, 04, 2016, 20, 44));
+		
+		s.criarFuncionario(new Funcionario("adm1", "123456", new Endereco(), "12345678", "1"));
+		
+		s.iniciar();
+	
+	}
+
+}

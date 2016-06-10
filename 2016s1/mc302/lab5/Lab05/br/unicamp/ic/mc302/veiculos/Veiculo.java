@@ -1,0 +1,21 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public class Veiculo {
+
+	private String placa;
+	private int peso;
+	
+	public void emplaca(String placa) {
+		this.placa = placa;
+	}
+	
+	public void definePeso(int peso){
+		this.peso = peso;
+	}
+	
+	public void display(){
+		System.out.println("Placa: "+placa);
+		System.out.println("Peso: "+peso);
+	}
+	
+}

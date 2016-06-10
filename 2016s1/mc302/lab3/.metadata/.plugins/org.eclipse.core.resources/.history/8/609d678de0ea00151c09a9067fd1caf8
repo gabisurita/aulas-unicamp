@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.documento2;
+
+public class ExCartaEncomenda {
+
+	public static void main(String[] args) {
+		CartaRegistrada c = new CartaRegistrada();
+		
+	}
+
+}

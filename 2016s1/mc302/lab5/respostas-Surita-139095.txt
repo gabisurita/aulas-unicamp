@@ -1,0 +1,34 @@
+
+1. Ocorre um erro de compilação, pois a operação adicionaInicio deixa de fazer
+parte da interface pública da classe Pilha e portanto não pode ser utilizada
+na função main.
+
+2. O programa passa a produzir um erro de compilação, pois são chamados métodos
+na função main (setTemperatura e fazerMonitoramento) que só são válidos para a
+classe Termostato.
+
+4. Declarar o apontador para um objeto Termostato como Chave ou Termometro não
+é válido e produz um erro, pois apesar de representar uma estrutura de herança
+múltipla, o resultado foi implementado com agregações, que não permitem
+polimorfismo em java.
+
+6. Quando se modifica o tipo da variável para Chave o programa acusa um erro de
+tipo como o especificado no ítem 4, devido à tentativa de usar polimorfismo com
+uma agregação. Ao se modificar o tipo para Termometro o programa acusa um erro
+de método inválido, pois apesar de permitir que um objeto seja referido por
+uma variável do tipo do pai, a classe termômetro não implementa os métodos da
+classe Termostato referidos no Exemplo.
+
+7. Na tentativa de compilação o programa acusa um erro de ambiguidade, pois o 
+atributo peso possuí duas instâncias presente em ambos os pais da classe 
+vUtilitario. Ao se utilizar a herança do tipo virtual para a classe avô 
+(Veiculo) nas classes pai (vPasseio e vCarga) de vUtilitario, o programa cria 
+apenas uma variável em memória que é compartilhada por referência entre os dois
+pais.
+
+8. Neste caso, a chamada de display gera um erro de ambiguidade, pois apesar do
+conteúdo da classe avô ser compartilhado com a herança do tipo virutal, ambas
+as classes pai tem sua propria implementação do método display, e portanto um 
+identificador deve ser utilizado para evitar a ambiguidade.
+
+

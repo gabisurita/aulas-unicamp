@@ -1,0 +1,17 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+public class ControleOcupacao {
+
+	public ControleOcupacao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void ocupar(Reserva r) {
+		
+	}
+	
+	public void desocupar(Quarto q) {
+		
+	}
+	
+}

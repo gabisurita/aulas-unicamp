@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.Hospede"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dadosPessoais.Endereco"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dadosPessoais.Documento"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.Funcionario"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.Data"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.Hora"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.Reserva"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControladorDeSaida"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleReservas"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleQuartos"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleHospedes"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleFuncionarios"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleLogin"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.QuartoSolteiro"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleSaida"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.Ocupacao"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleOcupacao"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.Quarto"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.Periodo"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.SistemaReservas"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.DataHora"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,16 @@
+package br.unicamp.ic.mc302.veiculos;
+
+public abstract class VeiculoRodoviario extends Veiculo {
+
+	public VeiculoRodoviario(int ano, String mar, String mod, String pl) {
+		super(ano, mar, mod, pl);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean ligar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

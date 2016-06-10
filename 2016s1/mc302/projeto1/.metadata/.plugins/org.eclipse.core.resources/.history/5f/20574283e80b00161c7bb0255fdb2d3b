@@ -1,0 +1,88 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.HashMap;
+
+public class ControleReservas {
+	
+	public static int HorasSemMulta = 12;
+	
+	private ControleSaida out;
+	private ControleQuartos quartos;
+	private SistemaReservas sys;
+	
+	private HashMap<Integer,Reserva> reservas;
+	private int nReserva = 1;
+	
+	
+	public ControleReservas(SistemaReservas sys, ControleQuartos quartos, ControleSaida out) {
+		
+		this.out = out;
+		this.quartos = quartos;
+		this.sys = sys;
+		
+		reservas = new HashMap<Integer,Reserva>();
+	}
+	
+	public Reserva buscaReserva(int id){
+		return reservas.get(id);
+	}
+	
+	public String listaReservas(){
+		return reservas.toString(); 
+	}
+
+	public int novoNumeroReserva(){
+		return nReserva++;
+	}
+	
+	public boolean novaReserva(Reserva r){
+		
+		if(r.hospede() == null){
+			out.println("Hospede invalido");
+			return false;
+		}
+		
+		if(r.duracao().inicio().depois(r.duracao().fim())){
+			out.println("Periodo invalido");
+			return false;
+		}
+		
+		if(r.duracao().inicio().antes(sys.horaDoSistema())){
+			out.println("Periodo invalido");
+			return false;
+		}
+		
+		
+		out.println(r.quarto()-1);
+		int disponiveis = quartos.nQuartos(r.quarto()-1);
+		Object[] keys = reservas.keySet().toArray();
+		
+		for(Object k : keys){
+			
+			int id = ((Integer)k).intValue();
+			Reserva res = reservas.get(id);
+			
+			if(res.duracao().cruza(r.duracao()) && res.quarto()==r.quarto()){
+				disponiveis--;
+			}
+			
+			if(disponiveis <= 0){	
+				out.println("Hotel cheio");
+				return false;
+			}
+		}
+			
+		reservas.put(r.id(), r);
+		return true;
+	}
+	
+	public void removerReserva(Reserva r){
+		
+		int inicio = r.duracao().inicio().diferenca(sys.horaDoSistema());
+		
+		if(inicio<60*HorasSemMulta && inicio > 0)
+			out.println("Cobrar multa de"+ r.multa());
+		
+		reservas.remove(r.id());
+	}
+}

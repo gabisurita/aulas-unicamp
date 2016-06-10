@@ -1,0 +1,19 @@
+package br.unicamp.ic.mc302.banco;
+
+public abstract class Repositorio {
+
+	public boolean atualizar(ContaCor c) {
+		int num = c.getNumConta();
+		boolean ok = remover(num);
+		if (ok) {
+			ok = inserir(c);
+		}
+
+		return ok;
+	}
+
+	public abstract boolean inserir(ContaCor c);
+
+	public abstract boolean remover(int num);
+
+}

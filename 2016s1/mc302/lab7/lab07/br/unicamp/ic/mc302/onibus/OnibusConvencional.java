@@ -1,0 +1,28 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.ArrayList;
+
+public class OnibusConvencional extends Onibus {
+
+	public OnibusConvencional(int id) {
+		super(id);
+		this.defineFileiras();
+
+	}
+
+	public void defineFileiras() {
+		
+		ArrayList<Fileira> fileiras = new ArrayList<Fileira>();
+		
+		for(int i=0; i<2; i++){
+			fileiras.add(new FileiraEspecial(4));
+		}
+		
+		for(int i=2; i<10; i++){
+			fileiras.add(new FileiraConvencional(4));
+		}
+		
+		super.setFileiras(fileiras, 10, 4);
+	}
+
+}

@@ -1,0 +1,56 @@
+package br.unicamp.ic.mc302.minhaMatriz;
+
+
+class MinhaMatriz{
+
+	private int lin;
+	private int col;
+	private int val[][];
+
+	public MinhaMatriz(int nlin, int ncol){
+		
+		lin = nlin;
+		col = ncol;
+		
+		val = new int[nlin][ncol];
+	}
+	
+	public MinhaMatriz(int values[][]){
+		
+		lin = values.length;
+		col = values[0].length;
+		
+		val = new int[lin][col];
+		
+		for(int i=0; i<lin; i++){
+			for(int j=0; j<col; j++){
+				val[i][j] = values[i][j];
+			}
+		}
+	}
+	
+	public int lins(){
+		return lin;
+	}
+	
+	public int cols(){
+		return col;
+	}
+	
+	public int values(){
+		return val;
+	}
+	
+	public MinhaMatriz prod(){
+		
+		MinhaMatriz Res = new MinhaMatriz(val);
+		
+		for(int i=0; i<lin; i++){
+			for(intj=0; j<col; j++){
+				val[i][j] = values[i][j];
+			}
+		}
+		
+		return Res;
+	}
+}

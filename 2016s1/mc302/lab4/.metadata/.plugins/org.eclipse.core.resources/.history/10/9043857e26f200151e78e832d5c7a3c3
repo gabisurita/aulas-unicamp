@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.onibus;
+
+public class Fileira {
+
+	int nPoltronas;
+	Poltrona poltrona[];
+	
+	public Fileira(int nPoltronas){
+		this.nPoltronas = nPoltronas;
+	}
+}

@@ -1,0 +1,17 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.io.Reader;
+
+public class ControladorDeEntrada {
+
+	private ControleReserva cont;
+	Reader r;
+	
+	public ControladorDeEntrada() {	
+		this.autenticado = false;
+	}
+
+	public void login(){
+		getString("Nome");
+	}
+}

@@ -1,0 +1,21 @@
+package br.unicamp.ic.mc302.onibus;
+
+public abstract class Poltrona {
+
+	private boolean ocupada;
+	
+	public Poltrona() {
+	}
+
+	public void ocupar(){
+		this.ocupada = true;
+	}
+	
+	public void desocupar(){
+		this.ocupada = false;
+	}
+	
+	public boolean ocupada(){
+		return this.ocupada;
+	}
+}

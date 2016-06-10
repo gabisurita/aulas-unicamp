@@ -1,0 +1,20 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Linha extends Figura {
+
+	private double inicio;
+	private double fim;
+	
+	public Linha(Tela tela, double x, double y) {
+		
+		super(tela);
+		
+		inicio = x;
+		fim = y;
+	}
+	
+	public void desenhar(){
+		System.out.println("Imprime linha: inicio="+inicio+"; fim="+fim);
+	}
+
+}

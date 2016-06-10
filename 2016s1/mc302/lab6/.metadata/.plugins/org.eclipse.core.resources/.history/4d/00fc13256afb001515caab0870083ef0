@@ -1,0 +1,14 @@
+package br.unicamp.ic.mc302.oficina;
+
+public class ServicoTipo2 extends Servico {
+
+	public ServicoTipo2(String cliente, String nome) {
+		super(cliente, nome, 50);
+	}
+
+	public ServicoTipo2() {
+		super(50);
+		// TODO Auto-generated constructor stub
+	}
+
+}

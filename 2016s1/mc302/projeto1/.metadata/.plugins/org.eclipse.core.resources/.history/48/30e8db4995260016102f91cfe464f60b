@@ -1,0 +1,16 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+public class QuartoSolteiro extends Quarto {
+
+	public QuartoSolteiro() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public QuartoSolteiro(int codigo, double preco, int capacidade, String descricao) {
+		super(codigo, preco, capacidade, descricao);
+		// TODO Auto-generated constructor stub
+	}
+
+	public String toString(){
+		return super.toString() + "Tipo: Solteiro\n"; 
+	}
+}

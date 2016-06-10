@@ -1,0 +1,5 @@
+package br.unicamp.ic.mc302.alunos;
+
+public class EstudanteUniversitario extends Pessoa {
+
+}

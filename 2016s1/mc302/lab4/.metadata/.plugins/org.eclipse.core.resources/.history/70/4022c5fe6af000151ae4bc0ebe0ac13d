@@ -1,0 +1,39 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Editor {
+	
+	private Tela tela;
+	
+	public Editor(){
+		tela = new Tela();
+	}
+	
+	public void novoPoligono(int l, double v[]){
+		tela.novoPoligono(l, v);
+	}
+	
+	public void novaLinha(double x, double y){
+		tela.novaLinha(x, y);
+	}
+	
+	public void novoCirculo(double r, double c){
+		tela.novoCirculo(r, c);
+	}
+	
+	public void novoPoligono(int g, int l, double v[]){
+		tela.novoPoligono(g, l, v);
+	}
+	
+	public void novaLinha(int g, double x, double y){
+		tela.novaLinha(g, x, y);
+	}
+	
+	public void novoCirculo(int g, double r, double c){
+		tela.novoCirculo(g, r, c);
+	}
+	
+	public void exibeTela(){
+		tela.desenhar();
+	}
+	
+}

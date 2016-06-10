@@ -1,0 +1,30 @@
+package br.unicamp.ic.mc302.oficina;
+import java.util.ArrayList;
+
+public class Funcionario {
+
+	private String nome;
+	private ArrayList<Servico> servicos;
+	
+	public Funcionario(String nome) {
+		this.nome = nome;	
+		servicos = new ArrayList<Servico>();
+	}
+	
+	public String nome(){
+		return nome;
+	}
+	
+	public int nServicos(Class Tipo){
+		int sum = 0;
+		
+		
+		for(Servico s: servicos){
+			if(s instanceof Tipo)
+				sum++;
+		}
+	}
+	
+	
+
+}

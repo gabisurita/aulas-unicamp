@@ -1,0 +1,15 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class ExemploEditor {
+
+	public static void main() {
+		
+		Editor meuEditor = new Editor();
+		
+		Poligono triangulo = new Poligono(3, {0,1,2});
+		
+		meuEditor.insereFigura();
+		
+	}
+
+}

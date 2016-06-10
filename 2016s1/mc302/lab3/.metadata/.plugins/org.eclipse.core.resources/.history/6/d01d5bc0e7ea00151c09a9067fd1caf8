@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.alunos;
+
+public class ExemploGraduando {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

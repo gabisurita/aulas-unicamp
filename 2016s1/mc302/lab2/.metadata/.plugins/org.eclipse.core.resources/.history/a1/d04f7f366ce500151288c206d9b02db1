@@ -1,0 +1,12 @@
+import br.unicamp.ic.mc302.minhaMatriz.MinhaMatriz;;
+
+class TestaLista {
+    public static void main (String [] args) {
+    	
+    	MinhaMatriz MatA = new MinhaMatriz(  );
+    	
+    	System.out.println("");
+
+    }
+}
+

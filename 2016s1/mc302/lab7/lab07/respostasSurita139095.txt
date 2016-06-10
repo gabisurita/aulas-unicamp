@@ -1,0 +1,74 @@
+Nome: Rodrigo Surita 
+RA: 139095
+
+
+1. O erro ocorre pois há uma tentativa de se instanciar uma classe abstrata, que
+não pode, por definição, ser instanciada. 
+
+2. As classes Carro e Caminhão compilam, porém um "warning" é apresentado já que
+as mesmas não definem a operação abstrada declarada no pai.
+
+3. Ao se colocar as classes Carro e Caminhão como abstract, instâncias destas 
+não podem s er criadas, e portanto o programa principal falha.
+
+4. --
+
+5. --
+
+6. --
+
+7. Criada a classe abstrada VeiculoRodoviario.
+
+8. Interface pública de Circulo:
+
+  a. equals(Obj)
+    - Origem: Object    
+    - Polimorfismo: Paramétrico
+    
+  b. esconder()
+    - Origem: Circulo
+    - Polimorfismo: Sobrecarga
+
+  c. getClass()
+    - Origem: Object
+    - Polimorfismo: Paramétrico
+    
+  d. hashCode()
+    - Origem: Object
+    - Polimorfismo: Paramétrico
+
+  e. mostrar(int, int)
+    - Origem: Circulo
+    - Polimorfismo: Sobrecarga
+
+  f. mover(int, int)
+    - Origem: Figura
+    - Polimorfismo: Paramétrico
+
+  g. notify()
+    - Origem: Object
+    - Polimorfismo: Paramétrico
+
+  h. notifyAll()
+    - Origem: Object
+    - Polimorfismo: Paramétrico
+
+  i. toString()
+    - Origem: Object
+    - Polimorfismo: Coerção
+
+  j. wait({long},{int})
+    - Origem: Object
+    - Polimorfismo: Paramétrico
+
+
+9. Com estas modificações, os métodos que antes eram abstratos na classe Figura
+agora possuem uma implementação relacionada, sendo que se o método 
+correspondente não for sobrecarregado, a implementação que será executada é
+a presente na classe Figura. Isto acontece para os métodos cujas redefinições
+foram comentadas (Linha.esconder() e Circulo.mostrar())
+
+10. -- 
+
+
+

@@ -1,0 +1,20 @@
+package br.unicamp.ic.mc302.veiculosMeta;
+
+public final class fabricaVeiculos {
+
+	private static int contadorVeiculos;
+	private static int contadorCarros;
+	private static int contadorCaminhoes;
+	
+	
+	public novoVeiculo(int placa) {
+		this.placa = placa;
+		contadorVeiculos++;
+	}
+
+	public static int getContadorVeiculos() {
+		return contadorVeiculos;
+	}
+
+	
+}

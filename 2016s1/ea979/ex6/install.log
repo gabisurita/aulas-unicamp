@@ -1,0 +1,39 @@
+ sudo dnf install freeglut freeglut-devel
+Fedora 22 - x86_64 - Updates                                                                                                                                  1.9 MB/s |  22 MB     00:11    
+Last metadata expiration check performed 0:00:13 ago on Thu May 19 10:47:03 2016.
+Package freeglut-2.8.1-5.fc22.x86_64 is already installed, skipping.
+Dependencies resolved.
+==============================================================================================================================================================================================
+ Package                                             Arch                                     Version                                          Repository                                Size
+==============================================================================================================================================================================================
+Installing:
+ freeglut-devel                                      x86_64                                   2.8.1-5.fc22                                     fedora                                   118 k
+ mesa-libGLU-devel                                   x86_64                                   9.0.0-7.fc22                                     fedora                                    13 k
+
+Transaction Summary
+==============================================================================================================================================================================================
+Install  2 Packages
+
+Total download size: 132 k
+Installed size: 130 k
+Is this ok [y/N]: y
+Downloading Packages:
+(1/2): mesa-libGLU-devel-9.0.0-7.fc22.x86_64.rpm                                                                                                               43 kB/s |  13 kB     00:00    
+(2/2): freeglut-devel-2.8.1-5.fc22.x86_64.rpm                                                                                                                 291 kB/s | 118 kB     00:00    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                          56 kB/s | 132 kB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Installing  : mesa-libGLU-devel-9.0.0-7.fc22.x86_64                                                                                                                                     1/2 
+  Installing  : freeglut-devel-2.8.1-5.fc22.x86_64                                                                                                                                        2/2 
+  Verifying   : freeglut-devel-2.8.1-5.fc22.x86_64                                                                                                                                        1/2 
+  Verifying   : mesa-libGLU-devel-9.0.0-7.fc22.x86_64                                                                                                                                     2/2 
+
+Installed:
+  freeglut-devel.x86_64 2.8.1-5.fc22                                                           mesa-libGLU-devel.x86_64 9.0.0-7.fc22                                                          
+
+Complete!
+

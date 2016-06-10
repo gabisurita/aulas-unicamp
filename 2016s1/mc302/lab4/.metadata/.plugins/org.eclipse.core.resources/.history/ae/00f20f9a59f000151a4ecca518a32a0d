@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class Tela {
+
+	private arrayList<Figura> figuras;
+	
+	public Tela(){
+		figuras = new ArrayList();
+	}
+}

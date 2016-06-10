@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.onibus;
+
+public class Onibus {
+
+	private int nFileiras;
+	private int nLugares;
+	
+	public Onibus(int nFileiras, int nLugares){
+		
+	}
+}

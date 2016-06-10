@@ -1,0 +1,16 @@
+package br.unicamp.ic.mc302.desenhos;
+
+import java.util.ArrayList;
+
+public class Tela {
+
+	private ArrayList<Figura> figuras;
+	
+	public Tela(){
+		figuras = new ArrayList();
+	}
+	
+	public void desenhar(){
+		System.out.println("Desenha a tela");
+	}
+}

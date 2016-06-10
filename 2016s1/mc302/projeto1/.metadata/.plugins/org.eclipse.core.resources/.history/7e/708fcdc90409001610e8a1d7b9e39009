@@ -1,0 +1,34 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Hashtable;
+
+public class ControleReservas {
+	
+	private boolean autenticado = false;
+	
+	private Hashtable<String,Funcionario> funcionarios;
+	private Hashtable<String,Hospede> hospedes;
+	private Hashtable<Integer,Quarto> quartos;
+	
+	public ControleReservas() {
+	}
+
+	public Hospede buscaHospede(String nome){
+		return hospedes.get(nome);
+	}
+	
+	public Quarto buscaQuarto(int id){
+		return quartos.get(id);
+	}
+	
+	public Funcionario buscaFuncionario(String nome){
+		return funcionarios.get(nome);
+	}
+
+	
+	public boolean login(String nome, String senha){
+		
+		Funcionario f = buscaFuncionario(nome);
+		autenticado = f.checarSenha(senha);
+	}
+}

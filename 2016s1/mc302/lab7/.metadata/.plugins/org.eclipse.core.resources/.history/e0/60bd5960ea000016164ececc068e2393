@@ -1,0 +1,27 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.ArrayList;
+
+public class Fileira<E> {
+
+	private ArrayList<E> poltronas;
+		
+	public Fileira() {	
+	}
+	
+	public void setPoltronas(ArrayList<E> poltronas){
+		this.poltronas = poltronas; 
+	}
+	
+	public boolean ocupar(char coluna){
+		return this.poltronas.get(coluna).ocupar();
+	}
+
+	public boolean desocupar(char coluna){
+		return this.poltronas.get(coluna).desocupar();
+	}
+	
+	public boolean ocupada(char coluna){
+		return this.poltronas.get(coluna).ocupada();
+	}
+}

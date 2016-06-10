@@ -1,0 +1,16 @@
+package br.unicamp.ic.mc302.desenhos;
+
+public class ExemploEditor {
+
+	public static void main() {
+		
+		Editor meuEditor = new Editor();
+		Tela tela = meuEditor.minhaTela();
+		
+		
+		double v[] = {0,1,2};
+		meuEditor.adicionaFigura(new Poligono(, 3, v));
+	
+	}
+
+}

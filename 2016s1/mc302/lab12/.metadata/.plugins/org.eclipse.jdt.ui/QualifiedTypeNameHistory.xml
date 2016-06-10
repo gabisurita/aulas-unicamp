@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.motor.Bateria"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.motor.Injetor"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.motor.VelaDeIgnicao"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.motor.Motor"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.veiculos.VeiculoMaritimo"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.veiculos.Veiculo"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.veiculos.VeiculoTerrestre"/>
+</qualifiedTypeNameHistroy>

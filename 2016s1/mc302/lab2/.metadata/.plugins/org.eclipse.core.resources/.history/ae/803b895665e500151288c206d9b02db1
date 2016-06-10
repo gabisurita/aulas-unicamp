@@ -1,0 +1,22 @@
+package br.unicamp.ic.mc302.circulo;
+
+// arquivo TestaCirculos.java
+class TestaCirculos {
+    public static void main (String args[ ]) {
+    	
+    	// Vetor de circulos
+    	Circulo c1[] = new Circulo[5];
+    	
+    	// Inicializa vetor de circulos
+    	for(int i=0; i<c1.length; i++){
+    		c1[i] = new Circulo(0,0,i);
+    	}
+    	
+    	for(int i=0; i<c1.length; i++){
+    		System.out.println("c1["+ i +"] (" + c1[i].getX() + ", " + c1[i].getY() + ")");
+        	System.out.print("Raio de c1["+ i +"]: " + c1[i].getRaio());
+    	}
+    }
+
+} // Fim da classe TestaCirculo
+ 

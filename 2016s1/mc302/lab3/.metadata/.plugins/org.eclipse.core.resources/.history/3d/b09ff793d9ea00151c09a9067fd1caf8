@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.documento2;
+
+public class CartaRegistarada extends Carta2 {
+
+	public CartaRegistarada() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,23 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+public class ControladorDeEntrada {
+
+	private ControleReserva cont;
+	Reader r;
+	
+	public ControladorDeEntrada() {	
+		r = new BufferedReader(new InputStreamReader(System.in));
+	}
+
+	public void login(){
+		String login;
+		String senha;
+		
+		System.out.println("Nome");
+		r.read(logon);
+	}
+}

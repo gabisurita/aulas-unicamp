@@ -1,0 +1,19 @@
+package sistemaCaixaAutomatico;
+
+public class ContaPoupanca extends ContaCor {
+
+	protected float rendimento = 0;
+	
+	public ContaPoupanca(String titular, float saldoAtual, int numConta, int senha) {
+		super(titular, saldoAtual, numConta, senha);
+	}
+	
+	public void atualizarRendimento(float rend){
+		this.rendimento = rend;
+	}
+	
+	public boolean render(){
+		return false;
+	}
+
+}

@@ -1,0 +1,19 @@
+package br.unicamp.ic.mc302.espaco;
+
+public class MainSistemaSolar {
+
+	public static void main(String[] args) {
+		SistemaPlanetario s = new SistemaPlanetario(1, 8, 1);
+		
+		s.defineEstrela("Sol", 0, 0);
+		s.defineCometa("Halley", 0, 0, 0);
+		
+		s.definePlanetaTerrestre("Mercurio", 0, 0, 0, 0);
+		s.definePlanetaTerrestre("Venus", 0, 0, 1, 0);
+		s.definePlanetaTerrestre("Terra", 0, 0, 1, 0);
+		
+		s.imprimePlanetas();
+		
+	}
+
+}

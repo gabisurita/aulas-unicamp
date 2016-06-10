@@ -1,0 +1,17 @@
+package br.unicamp.ic.mc302.onibus;
+
+import java.util.ArrayList;
+
+public class FileiraEspecial extends Fileira {
+
+	public FileiraEspecial(int nPoltronas) {
+		
+		super();	
+		ArrayList<Poltrona> poltronas = new ArrayList<Poltrona>();
+		
+		for(int i=0; i<nPoltronas; i++)
+			poltronas.add(new PoltronaEspecial());
+		
+		super.setPoltronas(poltronas);
+	}
+}

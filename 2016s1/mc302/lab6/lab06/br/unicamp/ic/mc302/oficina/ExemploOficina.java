@@ -1,0 +1,37 @@
+package br.unicamp.ic.mc302.oficina;
+
+public class ExemploOficina {
+
+	public static void main(String[] args) {
+		
+		Oficina of = new Oficina();
+		
+		of.adicionaFuncionario("a", 1000);
+		of.adicionaFuncionario("b", 500);
+		of.adicionaFuncionario("c", 500);
+		of.adicionaFuncionario("d", 500);
+		of.adicionaFuncionario("e", 500);
+		of.adicionaFuncionario("f", 500);
+		of.adicionaGerente("g", 2500);
+		of.adicionaFuncionario("h", 500);
+		of.adicionaFuncionario("i", 500);
+		of.adicionaFuncionario("j", 500);
+
+		for(int i=0; i<5; i++){
+			of.adicionaServico(new ServicoTipo1(), i);
+		}
+		
+		for(int i=2; i<7; i++){
+			of.adicionaServico(new ServicoTipo2(), i);
+		}
+		
+		for(int i=4; i<9; i++){
+			of.adicionaServico(new ServicoTipo3(), i);
+		}
+		
+		for(int i=0; i<10; i++){
+			of.dadosFuncionario(i);
+		}
+	
+	}
+}

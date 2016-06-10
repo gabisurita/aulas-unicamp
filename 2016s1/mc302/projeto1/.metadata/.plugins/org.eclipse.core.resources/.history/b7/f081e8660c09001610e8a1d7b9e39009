@@ -1,0 +1,86 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import java.util.Scanner;
+
+public class ControladorDeEntrada {
+
+	private ControleReservas cont;
+	private ControladorDeSaida out;
+	
+	Scanner in;
+	
+	public ControladorDeEntrada() {	
+		
+		in = new Scanner(System.in);
+	}
+	
+	private int getInt(String campo){
+		System.out.println(campo);
+		return in.nextInt();
+	}
+	
+	private String getString(String campo){
+		System.out.println(campo);
+		return in.next();
+	}
+	
+	private double getDouble(String campo){
+		System.out.println(campo);
+		return in.nextDouble();
+	}
+	
+	public void login(){
+		
+		cont.login(getString("Nome:"), getString("Senha:"));
+	}
+	
+	public void menuPrincipal(){
+		
+		out.menuPrincipal();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: menuReservas();
+			case 2: menuQuartos();
+			case 3:	menuHospedes();
+			case 4:	menuFuncionarios();
+			case 0: cont.logout();
+		}
+	}
+
+	public void menuReservas(){
+
+		out.menuReservas();
+		int op = in.nextInt();
+		
+		switch(op){
+			case 1: cont.listaReservas();
+			case 2: menuReserva(cont.buscaReserva(getInt("Numero da reserva:")));
+			case 3:	menuHospedes();
+			case 4: menuFuncionarios();
+			case 0:	menuPrincipal();
+		}
+	}
+	
+	public void menuQuartos(){
+	}
+	
+	public void menuHospedes(){
+	}
+	
+	public void menuFuncionarios(){
+	}
+
+	public void menuReserva(Reserva r){
+	}
+	
+	public void menuQuarto(Quarto q){
+	}
+	
+	public void menuHospede(Hospede h){
+	}
+	
+	public void menuFuncionario(Funcionario f){
+	}
+	
+}
