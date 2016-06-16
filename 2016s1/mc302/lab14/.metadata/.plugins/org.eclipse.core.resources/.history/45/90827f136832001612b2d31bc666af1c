@@ -1,0 +1,37 @@
+package sistemaCaixaAutomatico;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StreamTokenizer;
+
+public class TerminalReflexivo {
+
+	private ControladorCaixa controladorCaixa; // associação entre terminal e controladorcaixa
+
+	public TerminalReflexivo(int senhaCaixa) {
+		controladorCaixa = new ControladorCaixa(senhaCaixa);
+	}
+
+	private int getInt(String str) {
+
+		System.out.println("Entre com "+str);
+
+		// lê os valores digitados na entrada padrão
+		Reader r = new BufferedReader(new InputStreamReader (System.in));
+		StreamTokenizer st = new StreamTokenizer(r);
+
+		try {
+			st.nextToken();
+		}
+		catch (IOException e) {
+			System.out.println("Erro na leitura do teclado");
+			return(0);
+		}
+
+		return((int)st.nval);
+	}
+	
+	
+}

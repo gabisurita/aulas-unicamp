@@ -1,0 +1,134 @@
+package sistemaCaixaAutomatico;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StreamTokenizer;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+import com.sun.org.apache.bcel.internal.classfile.Attribute;
+
+public class TerminalReflexivo {
+
+	private ControladorCaixa controladorCaixa; // associação entre terminal e controladorcaixa
+
+	public TerminalReflexivo(int senhaCaixa) {
+		controladorCaixa = new ControladorCaixa(senhaCaixa);
+	}
+
+	private int getInt(String str) {
+
+		System.out.println("Entre com "+str);
+
+		// lê os valores digitados na entrada padrão
+		Reader r = new BufferedReader(new InputStreamReader (System.in));
+		StreamTokenizer st = new StreamTokenizer(r);
+
+		try {
+			st.nextToken();
+		}
+		catch (IOException e) {
+			System.out.println("Erro na leitura do teclado");
+			return(0);
+		}
+
+		return((int)st.nval);
+	}
+
+
+	
+	public void iniciarOperacao (){
+		int op;	// código da operação solicitada 
+
+
+		while(true){
+			op=getInt("opcao: 1 = consulta saldo, 2 = saque, 8 = modo supervisor, 9 = sai");
+			switch (op) {
+				
+				case 1:
+					System.out.println("Imprimindo Hierarquia de classes:");
+					
+					Class c = ContaCor.class;
+					
+					while(c != null){
+						System.out.println(c.getName());
+						c = c.getSuperclass();
+					}				
+					
+					break;
+					
+					
+				case 2:
+					System.out.println("Imprimindo atributos declarados:");
+					
+					Field[] atts = ContaCor.class.getDeclaredFields();
+					
+					for(Field at: atts){
+						System.out.println(at.getName());	
+					}
+					
+					break;
+					
+				case 3:
+					System.out.println("Imprimindo métodos públicos:");
+					
+					Method[] pmets = ControladorCaixa.class.getMethods(); 
+					
+					for(Method m: pmets){
+						System.out.println(m.getName());	
+					}
+					
+					break;
+				
+				case 4:
+					
+					Class metaCont = controladorCaixa.getClass();
+					
+					Method metaSaque = metaCont.getMethod("efetuarSaque", int.class,int.class,int.class);
+					
+					Method m = metaSaque.invoke(metaCont, getInt("número da conta"), getInt("senha"), getInt("valor"));
+					
+					bool
+					
+					if (saqueEfetuado)		// testa se saque foi aceito 
+						System.out.println("Pode retirar o dinheiro");
+					else 
+						System.out.println("Pedido de saque recusado");
+					break;
+					
+					
+				case 9:
+					return;
+				
+				case 11:
+					float saldo = controladorCaixa.consultarSaldo(getInt("número da conta"), getInt("senha"));
+	
+					if (saldo==-1)  // testa se consulta foi rejeitada 
+						System.out.println("conta/senha inválida ou conta inativa");
+					else
+						System.out.println("Saldo atual: "+saldo); 
+					break;
+	
+				case 12:
+					boolean saqueEfetuado = controladorCaixa.efetuarSaque(getInt("número da conta"), getInt("senha"), getInt("valor"));
+					if (saqueEfetuado)		// testa se saque foi aceito 
+						System.out.println("Pode retirar o dinheiro");
+					else 
+						System.out.println("Pedido de saque recusado");
+					break;
+	
+				case 13:
+					controladorCaixa.recarregar(getInt("senha")); 
+					break;
+	
+				case 18:
+					controladorCaixa.alternarModo(getInt("senha do caixa")); 
+					break;
+				
+			}
+		}
+	}
+}

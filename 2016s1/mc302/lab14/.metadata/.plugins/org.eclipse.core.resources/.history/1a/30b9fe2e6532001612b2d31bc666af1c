@@ -1,0 +1,10 @@
+package br.unicamp.ic.mc302.telefone;
+
+@SuppressWarnings("serial")
+public class TelefoneEvent extends java.util.EventObject {
+
+	public TelefoneEvent(Telefone source) {
+		super(source);
+	}
+	
+}

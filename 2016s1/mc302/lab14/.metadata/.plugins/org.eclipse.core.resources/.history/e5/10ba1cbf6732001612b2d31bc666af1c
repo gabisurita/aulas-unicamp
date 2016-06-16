@@ -1,0 +1,9 @@
+package sistemaCaixaAutomatico;
+
+public class TerminalReflexivo {
+
+	public TerminalReflexivo() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
