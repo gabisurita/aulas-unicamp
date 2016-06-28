@@ -1,9 +1,0 @@
-package br.unicamp.ic.mc302.reservaDeQuartos;
-
-public class Checkin {
-
-	public Checkin() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

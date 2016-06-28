@@ -1,0 +1,100 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import br.unicamp.ic.mc302.dataHora.*;
+
+public class Reserva {
+
+	public static int dinheiro = 1;
+	public static int cartao = 2;
+	public static int cheque = 3;
+	
+	private int id;
+	private int tipoQuarto;
+	private Hospede hospede;
+	private Periodo duracao;
+	private double multa;
+	private int formaPagamento;
+	private double desconto;
+	private boolean confirmada = false;
+	
+	public Reserva() {
+	}
+
+	public Reserva(int id, int tipoQuarto, Hospede hospede, Periodo duracao,
+			double multa, int formaPagamento, double desconto) {
+		
+		this.id = id;
+		this.tipoQuarto = tipoQuarto;
+		this.hospede = hospede;
+		this.duracao = duracao;
+		this.multa = multa;
+		this.formaPagamento = formaPagamento;
+		this.desconto = desconto;
+	}
+	
+	public int id(){
+		return this.id;
+	}
+
+	public int tipoQuarto(){
+		return this.tipoQuarto;
+	}
+
+	public Hospede hospede(){
+		return this.hospede;
+	}
+	
+	public double multa(){
+		return this.multa;
+	}
+	
+	public int formaPagamento(){
+		return this.formaPagamento;
+	}
+	
+	public double desconto(){
+		return this.desconto;
+	}
+	
+	public boolean confirmada(){
+		return this.confirmada;
+	}
+
+	public void confirmar(){
+		this.confirmada = true;
+	}
+	
+	public Periodo duracao(){
+		return duracao;
+	}
+	
+	public void alterarPeriodo(Periodo p){
+		this.duracao = p;
+	}
+	
+	public void alterarTipoQuarto(int tipo){
+		this.tipoQuarto = tipo;
+	}
+	
+	// TODO Pretty print tipo do tipoQuarto
+	public String toString(){
+		
+		String s = "";
+		s += "\nN. reserva: "+id;
+		s += "\n Confirmada:"+confirmada;
+		s += "\ntipo do quarto: "+tipoQuarto;
+		s += "\nHospede: "+hospede.nome();
+		s += "\nDuracao: "+duracao.inicio()+ " a "+ duracao.fim();
+		s += "\nMulta: "+multa;
+		s += "\nForma de Pagamento: ";
+		if(formaPagamento == dinheiro)
+			s += "dinheiro";
+		else if(formaPagamento == cheque)
+			s += "cheque";
+		else if(formaPagamento == cartao)
+			s += "cartao";
+		s += "\nDesconto: "+desconto;
+		
+		return s;
+	}
+}

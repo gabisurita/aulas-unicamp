@@ -7,6 +7,7 @@ public abstract class Quarto {
 	private int capacidade;
 	private String descricao;
 	private int id;
+	private EstadoOcupacao estado;
 	
 	public Quarto(){
 	}
@@ -53,5 +54,17 @@ public abstract class Quarto {
 	
 	protected void setId(int id){
 		this.id = id;
+	}
+	
+	public void ocupar(Ocupado ocp){
+		estado = ocp;
+	}
+	
+	public void desocupar(){
+		estado = new Desocupado();
+	}
+	
+	public boolean ocupado(){
+		return estado.ocupado();
 	}
 }

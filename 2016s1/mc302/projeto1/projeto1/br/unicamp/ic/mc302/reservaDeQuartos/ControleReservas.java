@@ -1,6 +1,7 @@
 package br.unicamp.ic.mc302.reservaDeQuartos;
 
 import java.util.HashMap;
+import java.util.NoSuchElementException;
 
 import br.unicamp.ic.mc302.dataHora.Periodo;
 
@@ -25,8 +26,14 @@ public class ControleReservas {
 		reservas = new HashMap<Integer,Reserva>();
 	}
 	
-	public Reserva buscaReserva(int id){
-		return reservas.get(id);
+	public Reserva buscaReserva(int id) throws NoSuchElementException {
+		
+		Reserva r = reservas.get(id);
+		
+		if(r == null)
+			throw new NoSuchElementException();
+		else
+			return r;
 	}
 	
 	public String listaReservas(){
@@ -98,4 +105,18 @@ public class ControleReservas {
 		
 		reservas.remove(r.id());
 	}
+
+	public void verificarReservas(){
+		Object[] keys = reservas.keySet().toArray();
+		
+		for(Object k : keys){
+			
+			int id = ((Integer)k).intValue();
+			Reserva res = reservas.get(id);
+			if(res.verificarReserva(sistema.horaDoSistema()) == false){
+				out.println("Reserva n "+res.id()+" vencida. Multa de RS "+res.multa());
+			}
+		}
+	}
+	
 }

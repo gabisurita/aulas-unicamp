@@ -10,7 +10,7 @@ public class ControleOcupacao {
 	private ControleQuartos quartos;
 	private ControleSaida out;
 	
-	private HashMap<Quarto, Ocupacao> ocupacoes;
+	private HashMap<Quarto, Ocupado> ocupacoes;
 	
 	public ControleOcupacao(SistemaReservas sistema, ControleQuartos quartos, ControleReservas reservas, ControleSaida out) {
 	
@@ -19,7 +19,7 @@ public class ControleOcupacao {
 		this.reservas = reservas;
 		this.out = out;
 	
-		ocupacoes = new HashMap<Quarto, Ocupacao>();
+		ocupacoes = new HashMap<Quarto, Ocupado>();
 	
 	}
 
@@ -35,8 +35,8 @@ public class ControleOcupacao {
 		
 		for(Quarto q : qIDs){
 			
-			Ocupacao oc = ocupacoes.get(q);
-			
+			Ocupado oc = ocupacoes.get(q);
+			System.out.println(oc);
 			if(oc == null){
 				vazio = q;
 				break;
@@ -48,7 +48,8 @@ public class ControleOcupacao {
 			return;
 		}
 			
-		Ocupacao ocp = new Ocupacao(vazio, r, sistema.horaDoSistema());
+		Ocupado ocp = new Ocupado(vazio, r, sistema.horaDoSistema());
+		vazio.ocupar(ocp);
 		ocupacoes.put(vazio, ocp);
 		
 		out.println("Quarto: "+vazio.id());
@@ -57,7 +58,8 @@ public class ControleOcupacao {
 	
 	public void desocupar(Quarto q) {
 		
-		Ocupacao oc = ocupacoes.remove(q);
+		Ocupado oc = ocupacoes.remove(q);
+		oc.quarto().desocupar();
 		reservas.removerReserva(oc.reserva());
 		
 		int estadia = sistema.horaDoSistema().diferenca(oc.inicio());

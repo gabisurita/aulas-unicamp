@@ -1,0 +1,9 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+public abstract class GeradorQuarto {
+
+	public GeradorQuarto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

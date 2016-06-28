@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleHospedes"/>
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleFuncionarios"/>
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleLogin"/>
-<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.QuartoSolteiro"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.ControleSaida"/>
@@ -30,4 +29,8 @@
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.Periodo"/>
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.SistemaReservas"/>
 <fullyQualifiedTypeName name="br.unicamp.ic.mc302.dataHora.DataHora"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.QuartoSolteiro"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.QuartoCasal"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.QuartoSuiteLuxo"/>
+<fullyQualifiedTypeName name="br.unicamp.ic.mc302.reservaDeQuartos.GeradorQuarto"/>
 </qualifiedTypeNameHistroy>

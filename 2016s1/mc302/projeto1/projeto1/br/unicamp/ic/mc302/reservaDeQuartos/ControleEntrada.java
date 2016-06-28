@@ -1,6 +1,7 @@
 package br.unicamp.ic.mc302.reservaDeQuartos;
 
 import java.util.Scanner;
+import java.util.NoSuchElementException;
 
 import br.unicamp.ic.mc302.dadosPessoais.*;
 import br.unicamp.ic.mc302.dataHora.DataHora;
@@ -128,7 +129,12 @@ public class ControleEntrada {
 					out.println(reservas.listaReservas());
 					break;
 				case 2: 
-					menuReserva(reservas.buscaReserva(getInt("Numero da reserva:")));
+					try{
+						menuReserva(reservas.buscaReserva(getInt("Numero da reserva:")));
+					}
+					catch(NoSuchElementException e){
+						out.println("Numero de reserva invalido.");
+					}
 					break;
 				case 3:
 					novaReserva();
@@ -151,7 +157,12 @@ public class ControleEntrada {
 					out.println(ocupacoes.listaOcupacoes());
 					break;
 				case 2:
-					ocupacoes.ocupar(reservas.buscaReserva(getInt("Numero da reserva:")));
+					try{
+						ocupacoes.ocupar(reservas.buscaReserva(getInt("Numero da reserva:")));
+					}
+					catch(NoSuchElementException e){
+						out.println("Numero de reserva invalido.");
+					}
 					break;
 				case 3: 
 					ocupacoes.desocupar(quartos.buscaQuarto(getInt("Numero do Quarto:")));
@@ -372,66 +383,48 @@ public class ControleEntrada {
 		if(n == 1)
 			novoHospede();
 		
-		Reserva r = new Reserva(
-				reservas.novoNumeroReserva(),
-				getInt("tipo: "+QuartoSolteiro.id+".Solteiro "+QuartoCasal.id+".Casal "+QuartoSuiteLuxo.id+".Luxo"),
-				hospedes.buscaHospede(getString("nome do hospede: ")),
-				new Periodo(
-						getInt("Chegada\ndia:"),
-						getInt("mes:"),
-						getInt("ano:"),
-						getInt("hora:"),
-						getInt("minuto:"),
-						getInt("Saida\ndia:"),
-						getInt("mes:"),
-						getInt("ano:"),
-						getInt("hora:"),
-						getInt("minuto:")
-				),
-				getDouble("multa de cancelamento: "),
-				getInt("forma de pagamento:"+Reserva.dinheiro+".Dinheiro "+Reserva.cartao+".Cartao "+Reserva.cheque+".Cheque"),
-				getDouble("desconto: ")
-		);
+		try{
+			Reserva r = new Reserva(
+					reservas.novoNumeroReserva(),
+					getInt("tipo: "+QuartoSolteiro.id+".Solteiro "+QuartoCasal.id+".Casal "+QuartoSuiteLuxo.id+".Luxo"),
+					hospedes.buscaHospede(getString("nome do hospede: ")),
+					new Periodo(
+							getInt("Chegada\ndia:"),
+							getInt("mes:"),
+							getInt("ano:"),
+							getInt("hora:"),
+							getInt("minuto:"),
+							getInt("Saida\ndia:"),
+							getInt("mes:"),
+							getInt("ano:"),
+							getInt("hora:"),
+							getInt("minuto:")
+					),
+					getDouble("multa de cancelamento: "),
+					getInt("forma de pagamento:"+Reserva.dinheiro+".Dinheiro "+Reserva.cartao+".Cartao "+Reserva.cheque+".Cheque"),
+					getDouble("desconto: ")
+			);
+			
+			reservas.novaReserva(r);
+			out.println("Código da reserva: "+r.id()+"\n");
 		
-		reservas.novaReserva(r);
-		out.println("Código da reserva: "+r.id()+"\n");
+		}
+		catch(NoSuchElementException e) {
+			out.println("Usuario invalido");
+		}
+
 	}
 	
 	public void novoQuarto(){
 		
 		int tipo = getInt("tipo: "+QuartoSolteiro.id+".Solteiro "+QuartoCasal.id+".Casal "+QuartoSuiteLuxo.id+".Luxo");
 		
-		Quarto q = null;
-		
-		if(tipo == QuartoSolteiro.id){
-			q = new QuartoSolteiro(
-					getInt("codigo:"),
-					getDouble("Preco:"),
-					getInt("capacidade:"),
-					getString("descricao:")
-			);
-		}
-		
-		else if(tipo == QuartoCasal.id){
-			q = new QuartoCasal(
-					getInt("codigo:"),
-					getDouble("Preco:"),
-					getInt("capacidade:"),
-					getString("descricao:")
-			);
-		}
-
-		else if(tipo == QuartoSuiteLuxo.id){
-			q = new QuartoSuiteLuxo(
-					getInt("codigo:"),
-					getDouble("Preco:"),
-					getInt("capacidade:"),
-					getString("descricao:")
-			);
-		}
-		
-		if(q!= null)
-			quartos.novoQuarto(q);
+		quartos.novoQuarto(
+				tipo,
+				getDouble("Preco:"),
+				getInt("capacidade:"),
+				getString("descricao:")
+		);
 	}
 	
 	public void novoHospede(){

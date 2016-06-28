@@ -1,0 +1,11 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+public abstract class EstadoOcupacao {
+
+	public EstadoOcupacao() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

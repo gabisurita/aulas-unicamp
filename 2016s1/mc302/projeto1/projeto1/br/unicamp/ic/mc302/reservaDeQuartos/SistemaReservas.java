@@ -33,24 +33,19 @@ public class SistemaReservas {
 	
 	public void alterarHora(DataHora h){
 		horaDoSistema = h;
+		reservas.verificarReservas();
 	}
 	
 	public void iniciar(){
 		in.inicio();
 	}
 	
-	public void criarRoot(String password){
-		
-		Funcionario root = new Funcionario("root", null, null, null, password); 
-		funcionarios.novoFuncionario(root);
-	}
-	
 	public void criarFuncionario(Funcionario f){
 		funcionarios.novoFuncionario(f);
 	}
 	
-	public void criarQuarto(Quarto q){
-		quartos.novoQuarto(q);
+	public void criarQuarto(int tipo, double preco, int capacidade, String descricao){
+		quartos.novoQuarto(tipo, preco, capacidade, descricao);
 	}
 	
 	public void criarHospede(Hospede h){

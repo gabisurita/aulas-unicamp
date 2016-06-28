@@ -97,4 +97,13 @@ public class Reserva {
 		
 		return s;
 	}
+	
+	public boolean verificarReserva(DataHora systime){
+		
+		if(duracao().inicio().antes(systime))
+			return false;
+		else
+			return true;
+		
+	}
 }

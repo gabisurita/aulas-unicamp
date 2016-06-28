@@ -1,0 +1,67 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+import br.unicamp.ic.mc302.dataHora.DataHora;
+
+public class SistemaReservas {
+
+	private ControleReservas reservas;
+	private ControleQuartos quartos;
+	private ControleHospedes hospedes;
+	private ControleFuncionarios funcionarios;
+	private ControleOcupacao ocupacoes;
+	private ControleLogin login;
+	private ControleEntrada in;
+	private ControleSaida out;
+	
+	private DataHora horaDoSistema;
+	private SistemaReservas inst;
+	
+	
+	private SistemaReservas() {
+		
+		out = new ControleSaida();
+		quartos = new ControleQuartos();
+		reservas = new ControleReservas(this, quartos, out);
+		hospedes = new ControleHospedes();
+		funcionarios = new ControleFuncionarios();
+		ocupacoes = new ControleOcupacao(this, quartos, reservas, out);
+		login = new ControleLogin(funcionarios);
+		in = new ControleEntrada(this, reservas, quartos, hospedes, funcionarios, ocupacoes, login, out);
+	}
+	
+	public static SistemaReservas iniciar(){
+		
+		if(inst == null){
+			inst = new SistemaReservas();
+			in.inicio();
+		}
+		
+		return inst;
+	}
+	
+	public DataHora horaDoSistema(){
+		return horaDoSistema;
+	}
+	
+	public void alterarHora(DataHora h){
+		horaDoSistema = h;
+		reservas.verificarReservas();
+	}
+		
+	public void criarFuncionario(Funcionario f){
+		funcionarios.novoFuncionario(f);
+	}
+	
+	public void criarQuarto(int tipo, double preco, int capacidade, String descricao){
+		quartos.novoQuarto(tipo, preco, capacidade, descricao);
+	}
+	
+	public void criarHospede(Hospede h){
+		hospedes.novoHospede(h);
+	}
+	
+	public void criarReserva(Reserva r){
+		reservas.novaReserva(r);
+	}
+
+}

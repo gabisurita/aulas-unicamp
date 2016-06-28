@@ -35,9 +35,10 @@ public class ControleQuartos {
 		return quartos.toString();
 	}
 	
-	public void novoQuarto(Quarto q){
-		quartos.put(q.codigo(), q);
-		tipos[q.id()-1].add(q);
+	public void novoQuarto(int tipo, double preco, int capacidade, String descricao){
+		Quarto novo = GeradorQuarto.novoQuarto(tipo, preco, capacidade, descricao);
+		quartos.put(novo.id(), novo);
+		tipos[novo.id()-1].add(novo);
 	}
 		
 	public void removerQuarto(Quarto q){

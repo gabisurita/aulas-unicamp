@@ -1,0 +1,22 @@
+package br.unicamp.ic.mc302.reservaDeQuartos;
+
+public abstract class GeradorQuarto {
+
+	public static int num;
+	
+	private GeradorQuarto() {
+	}
+	
+	public static QuartoCasal novoQuartoCasal(int preco, int capacidade, String descricao){
+		return new QuartoCasal(num, preco, capacidade, descricao);
+	}
+
+	public static QuartoSolteiro novoQuartoSolteiro(int preco, int capacidade, String descricao){
+		return new QuartoSolteiro(num, preco, capacidade, descricao);
+	}
+
+	public static QuartoSuiteLuxo novoQuartoSuiteLuxo(int preco, int capacidade, String descricao){
+		return new QuartoSuiteLuxo(num, preco, capacidade, descricao);
+	}
+	
+}
