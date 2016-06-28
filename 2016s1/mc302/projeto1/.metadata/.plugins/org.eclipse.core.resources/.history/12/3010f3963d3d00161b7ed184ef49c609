@@ -28,7 +28,7 @@ public class ControleQuartos {
 	}
 	
 	public ArrayList<Quarto> buscaQuartoTipo(int tipo){
-		return tipos[tipo-1];
+		return tipos[tipo];
 	}
 	
 	public String listaQuartos(){
